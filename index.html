@@ -1,40 +1,291 @@
----
-layout: default
-title: Home
----
+<!DOCTYPE html>
+<html lang="en-us">
 
-<div class="posts">
-  {% for post in paginator.posts %}
+  <head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      robdy &middot; personal site
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+    <!-- From favicomatic.com -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/public/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/public/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/public/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/public/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/public/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/public/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/public/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="/public/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="/public/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="/public/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/public/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="/public/favicon-128.png" sizes="128x128" />
+  <meta name="application-name" content="&nbsp;"/>
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="/public/mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="/public/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="/public/mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="/public/mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="/public/mstile-310x310.png" />
+
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-54120316-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-54120316-2');
+</script>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          robdy
+        </a>
+      </h1>
+      <p class="lead">In-free-time developer</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item active" href="/">Home</a>
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about/">About me</a>
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+
+    <a href="https://github.com/robdy/">View on GitHub</a>
+      
+    </nav>
+
+    <p>&copy; 2019. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="posts">
+  
   <div class="post">
     <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
+      <a href="/getting-started-with-discord-bot/">
+        Getting started with Discord bot
       </a>
     </h1>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+    <span class="post-date">07 Dec 2018</span>
 
-        {{ post.excerpt }}
-        {% if post.content contains site.excerpt_separator %}
-            <a href="{{ post.url }}">...Read more</a>
-        {% endif %}
+        <p>If you want to write Discord bot, there are several options for getting started. I’ll describe what I checked when I started looking at that.</p>
+
+<h3 id="no-coding-at-all">No coding at all</h3>
+
+<p>My first attempt was based on <a href="https://medium.com/dolphin-squad/bringing-twitter-tweets-into-discord-channels-e8ded1581da8">Mark Ramsey’s article</a>. If you happen to follow Tweets of specific user and post them to your Discord, read it and you’re done. However, if you need to do anything else (i.e reposting top Reddit posts from specific sub, getting weather alerts etc.), follow this tutorial.</p>
+
+
+        
+            <a href="/getting-started-with-discord-bot/">...Read more</a>
+        
   </div>
-  {% endfor %}
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/setup-jekyll-blog-with-netlify/">
+        Setup Jekyll blog with Netlify
+      </a>
+    </h1>
+
+    <span class="post-date">31 Jan 2018</span>
+
+        <p>As I’m not (yet) very experienced with web developing this guide can be obvious. However, it’s worth noted (at least for me) so I can check it if I have to go through the setup process again.</p>
+
+<h2 id="how-to-setup-jekyll-blog">How to setup Jekyll blog</h2>
+<p>I decided to try setting up blog using Jekyll. As a base of it I used <a href="https://github.com/barryclark/jekyll-now">jekyll-now</a> repo.</p>
+
+<h3 id="github-pages">GitHub Pages</h3>
+<p>For running it on GitHub Pages it was pretty easy, as written in the documentation. Just fork, rename repo to yourusername.github.io, wait up to 10 mins and you’re all set. <del>However, as GitHub Pages don’t support (and as far as I know don’t plan to) HTTPS for custom domains</del> I tried to use <a href="https://netlify.com">Netlify</a> as another platform to host it.</p>
+
+<p><strong>Update 2018-05-01</strong>: the above statement about GH Pages not supporting custom domains SSL is no longer valid as per <a href="https://blog.github.com/2018-05-01-github-pages-custom-domains-https/">that announcement</a>.</p>
+
+<h3 id="netlify">Netlify</h3>
+<p>One of the services that supports HTTPS for custom domains is <a href="https://netlify.com">Netlify</a>. I quickly found <a href="https://www.netlify.com/blog/2015/10/28/a-step-by-step-guide-jekyll-3.0-on-netlify/">this instruction</a>.</p>
+
+<p>However, it turned out it’s not so easy as described in the article.</p>
+
+
+        
+            <a href="/setup-jekyll-blog-with-netlify/">...Read more</a>
+        
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/searching-in-whole-forest/">
+        Searching in whole forest
+      </a>
+    </h1>
+
+    <span class="post-date">19 Dec 2017</span>
+
+        <p>When you want to find a user in Active Directory you usually use:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">Get-ADUser</span> -Filter <span class="o">{</span>SamAccountName -eq <span class="s2">"User1"</span><span class="o">}</span>
+</code></pre></div></div>
+
+<p>However, if you are in multi-domain environment and you’re looking for the user from another domain you’ll receive the error:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">Get-ADUser</span> : Cannot find an <span class="kt">object </span>with identity: <span class="s1">'User1'</span> under: <span class="s1">'DC=europe,DC=domain,DC=com'</span><span class="nb">.</span>
+</code></pre></div></div>
+
+<p>To resolve this issue you have to send your query to Global Catalog directly. If your Domain Controller is also Global Catalog you can do it by specyfying server with port 3268:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">Get-ADUser</span> -Filter <span class="o">{</span>SamAccountName -eq <span class="s2">"User1"</span><span class="o">}</span> -Server <span class="s2">"DC1:3268"</span>
+</code></pre></div></div>
+
+<p>If you don’t know the name of your DC you can try to use the DC you authenticates to:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">Get-ADUser</span> -Filter <span class="o">{</span>SamAccountName -eq <span class="s2">"User1"</span><span class="o">}</span> -Server <span class="s2">"</span><span class="k">$((</span><span class="nb">Get-ADDomainController</span><span class="o">)</span>.Name<span class="o">)</span>:3268<span class="s2">"
+</span></code></pre></div></div>
+
+        
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/installing-outlook-add-in-for-specific-users/">
+        Installing Outlook add-in for specific users
+      </a>
+    </h1>
+
+    <span class="post-date">10 Aug 2017</span>
+
+        <p>Goal: to install Outlook add-in available only for specific users and to make it enable by default</p>
+
+<h3 id="1st-attempt">1st attempt:</h3>
+
+<p>If you open Exchange admin center &gt; organization &gt; add-ins and try to add it from there:</p>
+
+<p><img src="/images/posts/2017-08-10-16_24_04-add-ins-microsoft-exchange.png" alt="2017-08-10-16_24_04-add-ins-microsoft-exchange.png" /></p>
+
+<p>you’ll not be able to set it provided only to specific user. You can only set its default state for enabled/disabled or make it available to nobody:</p>
+
+<p><img src="/images/posts/2017-08-10-16_29_20-edit-add-in-settings.png" alt="2017-08-10-16_29_20-edit-add-in-settings.png" /></p>
+
+
+        
+            <a href="/installing-outlook-add-in-for-specific-users/">...Read more</a>
+        
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/powershell-tip-skip-get/">
+        PowerShell tip - skip "Get"
+      </a>
+    </h1>
+
+    <span class="post-date">28 Jul 2017</span>
+
+        <p>Interesting thing which I discovered today (BTW, SysAdmin day). In PowerShell you can skip the verb “Get” (at least for most cmdlets – it wasn’t working for Get-Process).</p>
+
+<p>So instead of using</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Get-Mailbox yourname@domain.com
+</code></pre></div></div>
+
+<p>you can just use</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Mailbox yourname@domain.com
+</code></pre></div></div>
+
+<p>It looks like it’s not an alias as Get-Alias cmdlet doesn’t show anything for these noun-only cmdlets.</p>
+
+<p><del>Unfortunately it has one significant drawback: Tab completion/Intellisense in ISE will not be working with such cmdlets which makes them quite useless. But for ad-hoc checking can be helpful.</del></p>
+
+<h3 id="update-2018-12-06">Update 2018-12-06:</h3>
+
+<p>After digging a bit more I found far more information about that default verb feature. First of all, I check if that is something built into some modules so I tried cmdlets from multiple modules:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>service
+aduser mySan
+ExcelColumnName <span class="c1"># random cmdlet from ImportExcel module</span>
+</code></pre></div></div>
+
+<p>The only cmdlet I cannot run is</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>process
+</code></pre></div></div>
+
+<p>But it’s due to conflict with <code class="highlighter-rouge">begin process end</code>.</p>
+
+<p>I also discovered that tab completion apparently works (in contrary to what I wrote in that post previously) but only for parameters, not for cmdlets.</p>
+
+<h3 id="how-i-investigated">How I investigated?</h3>
+
+
+        
+            <a href="/powershell-tip-skip-get/">...Read more</a>
+        
+  </div>
+  
 </div>
 
 <div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
-  {% else %}
+  
     <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
+  
+  
     <span class="pagination-item newer">Newer</span>
-  {% endif %}
+  
 </div>
+    </div>
+
+  </body>
+</html>

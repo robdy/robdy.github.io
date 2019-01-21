@@ -11,7 +11,7 @@
 
   <title>
     
-      404: Page not found &middot; robdy
+      Searching in whole forest &middot; robdy
     
   </title>
 
@@ -113,9 +113,63 @@
 
 
     <div class="content container">
-      <div class="page">
-  <h1 class="page-title">404: Page not found</h1>
-  <p class="lead">Sorry, we've misplaced that URL or it's pointing to something that doesn't exist. <a href="/">Head back home</a> to try finding it again.</p>
+      <div class="post">
+  <h1 class="post-title">Searching in whole forest</h1>
+  <span class="post-date">19 Dec 2017</span>
+  <p>When you want to find a user in Active Directory you usually use:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">Get-ADUser</span> -Filter <span class="o">{</span>SamAccountName -eq <span class="s2">"User1"</span><span class="o">}</span>
+</code></pre></div></div>
+
+<p>However, if you are in multi-domain environment and you’re looking for the user from another domain you’ll receive the error:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">Get-ADUser</span> : Cannot find an <span class="kt">object </span>with identity: <span class="s1">'User1'</span> under: <span class="s1">'DC=europe,DC=domain,DC=com'</span><span class="nb">.</span>
+</code></pre></div></div>
+
+<p>To resolve this issue you have to send your query to Global Catalog directly. If your Domain Controller is also Global Catalog you can do it by specyfying server with port 3268:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">Get-ADUser</span> -Filter <span class="o">{</span>SamAccountName -eq <span class="s2">"User1"</span><span class="o">}</span> -Server <span class="s2">"DC1:3268"</span>
+</code></pre></div></div>
+
+<p>If you don’t know the name of your DC you can try to use the DC you authenticates to:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">Get-ADUser</span> -Filter <span class="o">{</span>SamAccountName -eq <span class="s2">"User1"</span><span class="o">}</span> -Server <span class="s2">"</span><span class="k">$((</span><span class="nb">Get-ADDomainController</span><span class="o">)</span>.Name<span class="o">)</span>:3268<span class="s2">"
+</span></code></pre></div></div>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/getting-started-with-discord-bot/">
+            Getting started with Discord bot
+            <small>07 Dec 2018</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/setup-jekyll-blog-with-netlify/">
+            Setup Jekyll blog with Netlify
+            <small>31 Jan 2018</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/installing-outlook-add-in-for-specific-users/">
+            Installing Outlook add-in for specific users
+            <small>10 Aug 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
 </div>
 
     </div>

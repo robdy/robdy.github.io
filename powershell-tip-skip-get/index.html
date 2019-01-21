@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      PowerShell tip - skip "Get" &middot; robdy
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+    <!-- From favicomatic.com -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/public/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/public/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/public/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/public/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/public/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/public/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/public/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="/public/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="/public/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="/public/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/public/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="/public/favicon-128.png" sizes="128x128" />
+  <meta name="application-name" content="&nbsp;"/>
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="/public/mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="/public/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="/public/mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="/public/mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="/public/mstile-310x310.png" />
+
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-54120316-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-54120316-2');
+</script>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          robdy
+        </a>
+      </h1>
+      <p class="lead">In-free-time developer</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/">Home</a>
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about/">About me</a>
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+
+    <a href="https://github.com/robdy/">View on GitHub</a>
+      
+    </nav>
+
+    <p>&copy; 2019. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">PowerShell tip - skip "Get"</h1>
+  <span class="post-date">28 Jul 2017</span>
+  <p>Interesting thing which I discovered today (BTW, SysAdmin day). In PowerShell you can skip the verb “Get” (at least for most cmdlets – it wasn’t working for Get-Process).</p>
+
+<p>So instead of using</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Get-Mailbox yourname@domain.com
+</code></pre></div></div>
+
+<p>you can just use</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Mailbox yourname@domain.com
+</code></pre></div></div>
+
+<p>It looks like it’s not an alias as Get-Alias cmdlet doesn’t show anything for these noun-only cmdlets.</p>
+
+<p><del>Unfortunately it has one significant drawback: Tab completion/Intellisense in ISE will not be working with such cmdlets which makes them quite useless. But for ad-hoc checking can be helpful.</del></p>
+
+<h3 id="update-2018-12-06">Update 2018-12-06:</h3>
+
+<p>After digging a bit more I found far more information about that default verb feature. First of all, I check if that is something built into some modules so I tried cmdlets from multiple modules:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>service
+aduser mySan
+ExcelColumnName <span class="c1"># random cmdlet from ImportExcel module</span>
+</code></pre></div></div>
+
+<p>The only cmdlet I cannot run is</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>process
+</code></pre></div></div>
+
+<p>But it’s due to conflict with <code class="highlighter-rouge">begin process end</code>.</p>
+
+<p>I also discovered that tab completion apparently works (in contrary to what I wrote in that post previously) but only for parameters, not for cmdlets.</p>
+
+<h3 id="how-i-investigated">How I investigated?</h3>
+
+<!--more-->
+
+<p>As stated in <a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_command_precedence?view=powershell-6">About Command Precedence</a>:</p>
+
+<blockquote>
+  <p>If you do not specify a path, PowerShell uses the following precedence
+order when it runs commands:</p>
+
+  <ol>
+    <li>Alias</li>
+    <li>Function</li>
+    <li>Cmdlet</li>
+    <li>Native Windows commands</li>
+  </ol>
+</blockquote>
+
+<p>Checking one by one (based on <code class="highlighter-rouge">Get-Service</code>):</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Checking for alias
+PS C:\&gt; Get-Alias service
+Get-Alias : This command cannot find a matching alias because an alias
+with the name 'service' does not exist.
+
+# Checking for function
+PS C:\&gt; Get-Command -Name service -CommandType Function
+Get-Command : The term 'service' is not recognized as the name of a cmdlet,
+function, script file, or operable program. Check the spelling of the name,
+or if a path was included, verify that the path is correct and try again.
+
+# Checking for cmdlet
+PS C:\&gt; Get-Command -Name service -CommandType Cmdlet
+Get-Command : The term 'service' is not recognized as the name of a cmdlet, 
+function, script file, or operable program. Check the spelling of the name,
+or if a path was included, verify that the path is correct and try again.
+</code></pre></div></div>
+
+<p>Next in cmd (for native Windows commands):</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;service
+'service' is not recognized as an internal or external command,
+operable program or batch file.
+</code></pre></div></div>
+
+<h3 id="what-next">What next?</h3>
+
+<p>What gave me the answer was searching in <a href="https://stackoverflow.com">Stack Overflow</a>. First interesting thing I found was <a href="https://stackoverflow.com/a/44476385/9902555">this answer</a>:</p>
+
+<blockquote>
+  <p>If the command name does <em>not</em> contain a dash or a slash, and no command has been found after exhausting the last option in the list above, it’ll try again, but <a href="https://github.com/PowerShell/PowerShell/blob/02b5f357a20e6dee9f8e60e3adb9025be3c94490/src/System.Management.Automation/engine/CommandDiscovery.cs#L1193">with <code class="highlighter-rouge">Get-</code> prepended</a>.</p>
+</blockquote>
+
+<p>And below, there’s an explanation <a href="https://stackoverflow.com/a/44477329/9902555">why <code class="highlighter-rouge">Get-Command</code> doesn’t follow that logic</a>.</p>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/getting-started-with-discord-bot/">
+            Getting started with Discord bot
+            <small>07 Dec 2018</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/setup-jekyll-blog-with-netlify/">
+            Setup Jekyll blog with Netlify
+            <small>31 Jan 2018</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/searching-in-whole-forest/">
+            Searching in whole forest
+            <small>19 Dec 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+    </div>
+
+  </body>
+</html>

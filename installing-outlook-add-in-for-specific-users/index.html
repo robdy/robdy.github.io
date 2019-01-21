@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Installing Outlook add-in for specific users &middot; robdy
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+    <!-- From favicomatic.com -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/public/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/public/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/public/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/public/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/public/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/public/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/public/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="/public/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="/public/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="/public/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/public/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="/public/favicon-128.png" sizes="128x128" />
+  <meta name="application-name" content="&nbsp;"/>
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="/public/mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="/public/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="/public/mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="/public/mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="/public/mstile-310x310.png" />
+
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-54120316-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-54120316-2');
+</script>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          robdy
+        </a>
+      </h1>
+      <p class="lead">In-free-time developer</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/">Home</a>
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about/">About me</a>
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+
+    <a href="https://github.com/robdy/">View on GitHub</a>
+      
+    </nav>
+
+    <p>&copy; 2019. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">Installing Outlook add-in for specific users</h1>
+  <span class="post-date">10 Aug 2017</span>
+  <p>Goal: to install Outlook add-in available only for specific users and to make it enable by default</p>
+
+<h3 id="1st-attempt">1st attempt:</h3>
+
+<p>If you open Exchange admin center &gt; organization &gt; add-ins and try to add it from there:</p>
+
+<p><img src="/images/posts/2017-08-10-16_24_04-add-ins-microsoft-exchange.png" alt="2017-08-10-16_24_04-add-ins-microsoft-exchange.png" /></p>
+
+<p>you’ll not be able to set it provided only to specific user. You can only set its default state for enabled/disabled or make it available to nobody:</p>
+
+<p><img src="/images/posts/2017-08-10-16_29_20-edit-add-in-settings.png" alt="2017-08-10-16_29_20-edit-add-in-settings.png" /></p>
+
+<!--more-->
+
+<h3 id="2nd-attempt">2nd attempt:</h3>
+
+<p>This time using Windows PowerShell:</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>New-App -Url <span class="s2">"https://xxxxxxxx.azurewebsites.net/app-manifest-tst.xml"</span> -OrganizationApp -UserList robert@domain.com,peter@domain.com -DefaultStateForUser Enabled
+</code></pre></div></div>
+<p>Surprisingly, this will install add-in enabled by default for all users.</p>
+
+<h3 id="3rd-attempt">3rd attempt:</h3>
+
+<p>This time I read the documentation more carefully and added this:</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-ProvidedTo SpecificUsers
+</code></pre></div></div>
+<p>Full command:</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>New-App -Url <span class="s2">"https://xxxxxxxx.azurewebsites.net/app-manifest-tst.xml"</span> -OrganizationApp -UserList robert@domain.com,piotr@domain.com -DefaultStateForUser Enabled -ProvidedTo SpecificUsers
+</code></pre></div></div>
+<p>This time it worked correctly.</p>
+
+<p>To enabled add-in for another user you need to add him/her to UserList:</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$t</span> <span class="o">=</span> Get-App -OrganizationApp |Where-Object Displayname -eq <span class="s2">"Add-in Name"</span>
+<span class="nv">$t</span>.UserList <span class="o">=</span> <span class="nv">$t</span>.UserList + <span class="s2">"marcin@domain.com"</span>
+<span class="nv">$t</span> |Set-App -UserList <span class="nv">$t</span>.UserList -OrganizationApp
+</code></pre></div></div>
+<p>If you receive an error ‘There are multiple recipients matching the identity’ you can use the following code:</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="o">(</span><span class="nv">$i</span><span class="o">=</span>0; <span class="nv">$i</span> -lt <span class="o">(</span><span class="nv">$t</span>.UserList.Count<span class="o">)</span>; <span class="nv">$i</span>++<span class="o">)</span> <span class="o">{</span>
+<span class="nv">$t</span>.UserList[<span class="nv">$i</span><span class="o">]</span> <span class="o">=</span> <span class="o">(</span>Get-Mailbox <span class="nv">$t</span>.UserList[<span class="nv">$i</span><span class="o">]</span> -RecipientTypeDetails UserMailbox<span class="o">)</span>.userprincipalname
+</code></pre></div></div>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/getting-started-with-discord-bot/">
+            Getting started with Discord bot
+            <small>07 Dec 2018</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/setup-jekyll-blog-with-netlify/">
+            Setup Jekyll blog with Netlify
+            <small>31 Jan 2018</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/searching-in-whole-forest/">
+            Searching in whole forest
+            <small>19 Dec 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+    </div>
+
+  </body>
+</html>

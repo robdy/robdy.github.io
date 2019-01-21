@@ -1,23 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-
- <title>robdy</title>
- <link href="/atom.xml" rel="self"/>
- <link href="/"/>
- <updated>2019-01-21T20:19:44+00:00</updated>
- <id></id>
- <author>
-   <name></name>
-   <email></email>
- </author>
-
- 
- <entry>
-   <title>Getting started with Discord bot</title>
-   <link href="/getting-started-with-discord-bot/"/>
-   <updated>2018-12-07T00:00:00+00:00</updated>
-   <id>/getting-started-with-discord-bot</id>
-   <content type="html">&lt;p&gt;If you want to write Discord bot, there are several options for getting started. I’ll describe what I checked when I started looking at that.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-01-21T20:19:44+00:00</updated><id>/</id><title type="html">robdy</title><subtitle>In-free-time developer</subtitle><entry><title type="html">Getting started with Discord bot</title><link href="/getting-started-with-discord-bot/" rel="alternate" type="text/html" title="Getting started with Discord bot" /><published>2018-12-07T00:00:00+00:00</published><updated>2018-12-07T00:00:00+00:00</updated><id>/getting-started-with-discord-bot</id><content type="html" xml:base="/getting-started-with-discord-bot/">&lt;p&gt;If you want to write Discord bot, there are several options for getting started. I’ll describe what I checked when I started looking at that.&lt;/p&gt;
 
 &lt;h3 id=&quot;no-coding-at-all&quot;&gt;No coding at all&lt;/h3&gt;
 
@@ -70,16 +51,7 @@
 
 &lt;p&gt;Now you just need to upvote something using your account. You might sometimes use &lt;code class=&quot;highlighter-rouge&quot;&gt;Check now&lt;/code&gt; if the applet doesn’t run &lt;del&gt;and you’re impatient as me&lt;/del&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/posts/2018-12-07 12_25_29-If New upvoted post by _u_robdy, then Make a web request - IFTTT.png&quot; alt=&quot;2018-12-07 12_25_29-If New upvoted post by _u_robdy, then Make a web request - IFTTT.png&quot; /&gt;&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Setup Jekyll blog with Netlify</title>
-   <link href="/setup-jekyll-blog-with-netlify/"/>
-   <updated>2018-01-31T00:00:00+00:00</updated>
-   <id>/setup-jekyll-blog-with-netlify</id>
-   <content type="html">&lt;p&gt;As I’m not (yet) very experienced with web developing this guide can be obvious. However, it’s worth noted (at least for me) so I can check it if I have to go through the setup process again.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/2018-12-07 12_25_29-If New upvoted post by _u_robdy, then Make a web request - IFTTT.png&quot; alt=&quot;2018-12-07 12_25_29-If New upvoted post by _u_robdy, then Make a web request - IFTTT.png&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">If you want to write Discord bot, there are several options for getting started. I’ll describe what I checked when I started looking at that. No coding at all My first attempt was based on Mark Ramsey’s article. If you happen to follow Tweets of specific user and post them to your Discord, read it and you’re done. However, if you need to do anything else (i.e reposting top Reddit posts from specific sub, getting weather alerts etc.), follow this tutorial.</summary></entry><entry><title type="html">Setup Jekyll blog with Netlify</title><link href="/setup-jekyll-blog-with-netlify/" rel="alternate" type="text/html" title="Setup Jekyll blog with Netlify" /><published>2018-01-31T00:00:00+00:00</published><updated>2018-01-31T00:00:00+00:00</updated><id>/setup-jekyll-blog-with-netlify</id><content type="html" xml:base="/setup-jekyll-blog-with-netlify/">&lt;p&gt;As I’m not (yet) very experienced with web developing this guide can be obvious. However, it’s worth noted (at least for me) so I can check it if I have to go through the setup process again.&lt;/p&gt;
 
 &lt;h2 id=&quot;how-to-setup-jekyll-blog&quot;&gt;How to setup Jekyll blog&lt;/h2&gt;
 &lt;p&gt;I decided to try setting up blog using Jekyll. As a base of it I used &lt;a href=&quot;https://github.com/barryclark/jekyll-now&quot;&gt;jekyll-now&lt;/a&gt; repo.&lt;/p&gt;
@@ -143,16 +115,7 @@
 
 &lt;p&gt;Just one more thing - to also see drafts on the webpage I had to adjust the settings a bit:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/posts/2018-01-31 22_34_53-Build &amp;amp; deploy _ Settings.png&quot; alt=&quot;2018-01-31 22_34_53-Build &amp;amp; deploy _ Settings.png&quot; /&gt;&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Searching in whole forest</title>
-   <link href="/searching-in-whole-forest/"/>
-   <updated>2017-12-19T00:00:00+00:00</updated>
-   <id>/searching-in-whole-forest</id>
-   <content type="html">&lt;p&gt;When you want to find a user in Active Directory you usually use:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/2018-01-31 22_34_53-Build &amp;amp; deploy _ Settings.png&quot; alt=&quot;2018-01-31 22_34_53-Build &amp;amp; deploy _ Settings.png&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">As I’m not (yet) very experienced with web developing this guide can be obvious. However, it’s worth noted (at least for me) so I can check it if I have to go through the setup process again. How to setup Jekyll blog I decided to try setting up blog using Jekyll. As a base of it I used jekyll-now repo. GitHub Pages For running it on GitHub Pages it was pretty easy, as written in the documentation. Just fork, rename repo to yourusername.github.io, wait up to 10 mins and you’re all set. However, as GitHub Pages don’t support (and as far as I know don’t plan to) HTTPS for custom domains I tried to use Netlify as another platform to host it. Update 2018-05-01: the above statement about GH Pages not supporting custom domains SSL is no longer valid as per that announcement. Netlify One of the services that supports HTTPS for custom domains is Netlify. I quickly found this instruction. However, it turned out it’s not so easy as described in the article.</summary></entry><entry><title type="html">Searching in whole forest</title><link href="/searching-in-whole-forest/" rel="alternate" type="text/html" title="Searching in whole forest" /><published>2017-12-19T00:00:00+00:00</published><updated>2017-12-19T00:00:00+00:00</updated><id>/searching-in-whole-forest</id><content type="html" xml:base="/searching-in-whole-forest/">&lt;p&gt;When you want to find a user in Active Directory you usually use:&lt;/p&gt;
 
 &lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;Get-ADUser&lt;/span&gt; -Filter &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;SamAccountName -eq &lt;span class=&quot;s2&quot;&gt;&quot;User1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -170,16 +133,7 @@
 &lt;p&gt;If you don’t know the name of your DC you can try to use the DC you authenticates to:&lt;/p&gt;
 
 &lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;Get-ADUser&lt;/span&gt; -Filter &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;SamAccountName -eq &lt;span class=&quot;s2&quot;&gt;&quot;User1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; -Server &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Get-ADDomainController&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.Name&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;:3268&lt;span class=&quot;s2&quot;&gt;&quot;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Installing Outlook add-in for specific users</title>
-   <link href="/installing-outlook-add-in-for-specific-users/"/>
-   <updated>2017-08-10T00:00:00+00:00</updated>
-   <id>/installing-outlook-add-in-for-specific-users</id>
-   <content type="html">&lt;p&gt;Goal: to install Outlook add-in available only for specific users and to make it enable by default&lt;/p&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">When you want to find a user in Active Directory you usually use: Get-ADUser -Filter {SamAccountName -eq &quot;User1&quot;} However, if you are in multi-domain environment and you’re looking for the user from another domain you’ll receive the error: Get-ADUser : Cannot find an object with identity: 'User1' under: 'DC=europe,DC=domain,DC=com'. To resolve this issue you have to send your query to Global Catalog directly. If your Domain Controller is also Global Catalog you can do it by specyfying server with port 3268: Get-ADUser -Filter {SamAccountName -eq &quot;User1&quot;} -Server &quot;DC1:3268&quot; If you don’t know the name of your DC you can try to use the DC you authenticates to: Get-ADUser -Filter {SamAccountName -eq &quot;User1&quot;} -Server &quot;$((Get-ADDomainController).Name):3268&quot;</summary></entry><entry><title type="html">Installing Outlook add-in for specific users</title><link href="/installing-outlook-add-in-for-specific-users/" rel="alternate" type="text/html" title="Installing Outlook add-in for specific users" /><published>2017-08-10T00:00:00+00:00</published><updated>2017-08-10T00:00:00+00:00</updated><id>/installing-outlook-add-in-for-specific-users</id><content type="html" xml:base="/installing-outlook-add-in-for-specific-users/">&lt;p&gt;Goal: to install Outlook add-in available only for specific users and to make it enable by default&lt;/p&gt;
 
 &lt;h3 id=&quot;1st-attempt&quot;&gt;1st attempt:&lt;/h3&gt;
 
@@ -218,16 +172,7 @@
 &lt;p&gt;If you receive an error ‘There are multiple recipients matching the identity’ you can use the following code:&lt;/p&gt;
 &lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0; &lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt; -lt &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$t&lt;/span&gt;.UserList.Count&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;; &lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;++&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$t&lt;/span&gt;.UserList[&lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Get-Mailbox &lt;span class=&quot;nv&quot;&gt;$t&lt;/span&gt;.UserList[&lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -RecipientTypeDetails UserMailbox&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.userprincipalname
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>PowerShell tip - skip "Get"</title>
-   <link href="/powershell-tip-skip-get/"/>
-   <updated>2017-07-28T00:00:00+00:00</updated>
-   <id>/powershell-tip-skip-get</id>
-   <content type="html">&lt;p&gt;Interesting thing which I discovered today (BTW, SysAdmin day). In PowerShell you can skip the verb “Get” (at least for most cmdlets – it wasn’t working for Get-Process).&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Goal: to install Outlook add-in available only for specific users and to make it enable by default 1st attempt: If you open Exchange admin center &amp;gt; organization &amp;gt; add-ins and try to add it from there: you’ll not be able to set it provided only to specific user. You can only set its default state for enabled/disabled or make it available to nobody:</summary></entry><entry><title type="html">PowerShell tip - skip “Get”</title><link href="/powershell-tip-skip-get/" rel="alternate" type="text/html" title="PowerShell tip - skip &quot;Get&quot;" /><published>2017-07-28T00:00:00+00:00</published><updated>2017-07-28T00:00:00+00:00</updated><id>/powershell-tip-skip-get</id><content type="html" xml:base="/powershell-tip-skip-get/">&lt;p&gt;Interesting thing which I discovered today (BTW, SysAdmin day). In PowerShell you can skip the verb “Get” (at least for most cmdlets – it wasn’t working for Get-Process).&lt;/p&gt;
 
 &lt;p&gt;So instead of using&lt;/p&gt;
 
@@ -313,9 +258,4 @@ operable program or batch file.
   &lt;p&gt;If the command name does &lt;em&gt;not&lt;/em&gt; contain a dash or a slash, and no command has been found after exhausting the last option in the list above, it’ll try again, but &lt;a href=&quot;https://github.com/PowerShell/PowerShell/blob/02b5f357a20e6dee9f8e60e3adb9025be3c94490/src/System.Management.Automation/engine/CommandDiscovery.cs#L1193&quot;&gt;with &lt;code class=&quot;highlighter-rouge&quot;&gt;Get-&lt;/code&gt; prepended&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;And below, there’s an explanation &lt;a href=&quot;https://stackoverflow.com/a/44477329/9902555&quot;&gt;why &lt;code class=&quot;highlighter-rouge&quot;&gt;Get-Command&lt;/code&gt; doesn’t follow that logic&lt;/a&gt;.&lt;/p&gt;
-</content>
- </entry>
- 
-
-</feed>
+&lt;p&gt;And below, there’s an explanation &lt;a href=&quot;https://stackoverflow.com/a/44477329/9902555&quot;&gt;why &lt;code class=&quot;highlighter-rouge&quot;&gt;Get-Command&lt;/code&gt; doesn’t follow that logic&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Interesting thing which I discovered today (BTW, SysAdmin day). In PowerShell you can skip the verb “Get” (at least for most cmdlets – it wasn’t working for Get-Process). So instead of using Get-Mailbox yourname@domain.com you can just use Mailbox yourname@domain.com It looks like it’s not an alias as Get-Alias cmdlet doesn’t show anything for these noun-only cmdlets. Unfortunately it has one significant drawback: Tab completion/Intellisense in ISE will not be working with such cmdlets which makes them quite useless. But for ad-hoc checking can be helpful. Update 2018-12-06: After digging a bit more I found far more information about that default verb feature. First of all, I check if that is something built into some modules so I tried cmdlets from multiple modules: service aduser mySan ExcelColumnName # random cmdlet from ImportExcel module The only cmdlet I cannot run is process But it’s due to conflict with begin process end. I also discovered that tab completion apparently works (in contrary to what I wrote in that post previously) but only for parameters, not for cmdlets. How I investigated?</summary></entry></feed>
