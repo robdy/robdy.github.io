@@ -64,7 +64,7 @@
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <h1>
-        <a href="/">
+        <a href="http://80.211.137.87:4000/">
           robdy
         </a>
       </h1>
@@ -72,8 +72,7 @@
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item active" href="/">Home</a>
-
+      <a class="sidebar-nav-item active" href="http://80.211.137.87:4000/">Home</a>
       
 
       
@@ -89,6 +88,12 @@
         
       
         
+          
+            <a class="sidebar-nav-item" href="/all/">All posts</a>
+          
+        
+      
+        
       
         
           
@@ -102,18 +107,50 @@
       
         
       
+        
+          
+        
+      
 
-    <a href="https://github.com/robdy/">View on GitHub</a>
+    <a href="https://github.com/robdy/robdy.github.io" target="_blank" rel="noopener noreferrer">View on GitHub</a>
       
     </nav>
 
-    <p>&copy; 2019. All rights reserved.</p>
+    <p>© 2019. All rights reserved.</p>
   </div>
 </div>
 
 
     <div class="content container">
       <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/host-sfb-meetings-like-a-pro/">
+        Host Skype for Business meetings like a professional
+      </a>
+    </h1>
+
+    <span class="post-date">29 Jan 2019</span>
+
+        <p>In that post I’d like to share some of the best practices for organizing meetings. Please note that <strong>I only focus on technical aspects</strong> (configuration of Outlook and Skype for Business) and assume that you know the basics (like preparing the agenda, clarifying the purpose of the meeting, choosing appropriate content for the audience) I also assume that your Skype for Business is working correctly (you have enough bandwidth, stable connection).</p>
+
+<h2 id="checklist-only">Checklist only</h2>
+
+<ul>
+  <li>Make sure to specify if you want to receive responses to the invitation</li>
+  <li>Limit the presenter role to the people who need it</li>
+  <li>Mute all attendees and block attendees’ video</li>
+  <li>Upload the presentation before the meeting</li>
+  <li>Make the presentation downloadable (including notes and annotations) if you wish</li>
+  <li>While sharing content other than presentation – use desktop sharing</li>
+</ul>
+
+
+        
+            <a href="/host-sfb-meetings-like-a-pro/">...Read more</a>
+        
+  </div>
   
   <div class="post">
     <h1 class="post-title">
@@ -128,7 +165,7 @@
 
 <h3 id="no-coding-at-all">No coding at all</h3>
 
-<p>My first attempt was based on <a href="https://medium.com/dolphin-squad/bringing-twitter-tweets-into-discord-channels-e8ded1581da8">Mark Ramsey’s article</a>. If you happen to follow Tweets of specific user and post them to your Discord, read it and you’re done. However, if you need to do anything else (i.e reposting top Reddit posts from specific sub, getting weather alerts etc.), follow this tutorial.</p>
+<p>My first attempt was based on <a href="https://medium.com/dolphin-squad/bringing-twitter-tweets-into-discord-channels-e8ded1581da8" target="_blank" rel="noopener noreferrer">Mark Ramsey’s article</a>. If you happen to follow Tweets of specific user and post them to your Discord, read it and you’re done. However, if you need to do anything else (i.e reposting top Reddit posts from specific sub, getting weather alerts etc.), follow this tutorial.</p>
 
 
         
@@ -148,15 +185,15 @@
         <p>As I’m not (yet) very experienced with web developing this guide can be obvious. However, it’s worth noted (at least for me) so I can check it if I have to go through the setup process again.</p>
 
 <h2 id="how-to-setup-jekyll-blog">How to setup Jekyll blog</h2>
-<p>I decided to try setting up blog using Jekyll. As a base of it I used <a href="https://github.com/barryclark/jekyll-now">jekyll-now</a> repo.</p>
+<p>I decided to try setting up blog using Jekyll. As a base of it I used <a href="https://github.com/barryclark/jekyll-now" target="_blank" rel="noopener noreferrer">jekyll-now</a> repo.</p>
 
 <h3 id="github-pages">GitHub Pages</h3>
-<p>For running it on GitHub Pages it was pretty easy, as written in the documentation. Just fork, rename repo to yourusername.github.io, wait up to 10 mins and you’re all set. <del>However, as GitHub Pages don’t support (and as far as I know don’t plan to) HTTPS for custom domains</del> I tried to use <a href="https://netlify.com">Netlify</a> as another platform to host it.</p>
+<p>For running it on GitHub Pages it was pretty easy, as written in the documentation. Just fork, rename repo to yourusername.github.io, wait up to 10 mins and you’re all set. <del>However, as GitHub Pages don’t support (and as far as I know don’t plan to) HTTPS for custom domains</del> I tried to use <a href="https://netlify.com" target="_blank" rel="noopener noreferrer">Netlify</a> as another platform to host it.</p>
 
-<p><strong>Update 2018-05-01</strong>: the above statement about GH Pages not supporting custom domains SSL is no longer valid as per <a href="https://blog.github.com/2018-05-01-github-pages-custom-domains-https/">that announcement</a>.</p>
+<p><strong>Update 2018-05-01</strong>: the above statement about GH Pages not supporting custom domains SSL is no longer valid as per <a href="https://blog.github.com/2018-05-01-github-pages-custom-domains-https/" target="_blank" rel="noopener noreferrer">that announcement</a>.</p>
 
 <h3 id="netlify">Netlify</h3>
-<p>One of the services that supports HTTPS for custom domains is <a href="https://netlify.com">Netlify</a>. I quickly found <a href="https://www.netlify.com/blog/2015/10/28/a-step-by-step-guide-jekyll-3.0-on-netlify/">this instruction</a>.</p>
+<p>One of the services that supports HTTPS for custom domains is <a href="https://netlify.com" target="_blank" rel="noopener noreferrer">Netlify</a>. I quickly found <a href="https://www.netlify.com/blog/2015/10/28/a-step-by-step-guide-jekyll-3.0-on-netlify/" target="_blank" rel="noopener noreferrer">this instruction</a>.</p>
 
 <p>However, it turned out it’s not so easy as described in the article.</p>
 
@@ -213,11 +250,11 @@
 
 <p>If you open Exchange admin center &gt; organization &gt; add-ins and try to add it from there:</p>
 
-<p><img src="/images/posts/2017-08-10-16_24_04-add-ins-microsoft-exchange.png" alt="2017-08-10-16_24_04-add-ins-microsoft-exchange.png" /></p>
+<p><img src="/images/posts/2017-08-10-16_24_04-add-ins-microsoft-exchange.png" alt="2017-08-10-16_24_04-add-ins-microsoft-exchange.png"></p>
 
 <p>you’ll not be able to set it provided only to specific user. You can only set its default state for enabled/disabled or make it available to nobody:</p>
 
-<p><img src="/images/posts/2017-08-10-16_29_20-edit-add-in-settings.png" alt="2017-08-10-16_29_20-edit-add-in-settings.png" /></p>
+<p><img src="/images/posts/2017-08-10-16_29_20-edit-add-in-settings.png" alt="2017-08-10-16_29_20-edit-add-in-settings.png"></p>
 
 
         
@@ -225,61 +262,11 @@
         
   </div>
   
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/powershell-tip-skip-get/">
-        PowerShell tip - skip "Get"
-      </a>
-    </h1>
-
-    <span class="post-date">28 Jul 2017</span>
-
-        <p>Interesting thing which I discovered today (BTW, SysAdmin day). In PowerShell you can skip the verb “Get” (at least for most cmdlets – it wasn’t working for Get-Process).</p>
-
-<p>So instead of using</p>
-
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Get-Mailbox yourname@domain.com
-</code></pre></div></div>
-
-<p>you can just use</p>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Mailbox yourname@domain.com
-</code></pre></div></div>
-
-<p>It looks like it’s not an alias as Get-Alias cmdlet doesn’t show anything for these noun-only cmdlets.</p>
-
-<p><del>Unfortunately it has one significant drawback: Tab completion/Intellisense in ISE will not be working with such cmdlets which makes them quite useless. But for ad-hoc checking can be helpful.</del></p>
-
-<h3 id="update-2018-12-06">Update 2018-12-06:</h3>
-
-<p>After digging a bit more I found far more information about that default verb feature. First of all, I check if that is something built into some modules so I tried cmdlets from multiple modules:</p>
-
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>service
-aduser mySan
-ExcelColumnName <span class="c1"># random cmdlet from ImportExcel module</span>
-</code></pre></div></div>
-
-<p>The only cmdlet I cannot run is</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>process
-</code></pre></div></div>
-
-<p>But it’s due to conflict with <code class="highlighter-rouge">begin process end</code>.</p>
-
-<p>I also discovered that tab completion apparently works (in contrary to what I wrote in that post previously) but only for parameters, not for cmdlets.</p>
-
-<h3 id="how-i-investigated">How I investigated?</h3>
-
-
-        
-            <a href="/powershell-tip-skip-get/">...Read more</a>
-        
-  </div>
-  
 </div>
 
 <div class="pagination">
   
-    <span class="pagination-item older">Older</span>
+    <a class="pagination-item older" href="page2">Older</a>
   
   
     <span class="pagination-item newer">Newer</span>

@@ -1,4 +1,168 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-01-21T20:24:19+00:00</updated><id>/</id><title type="html">robdy</title><subtitle>In-free-time developer</subtitle><entry><title type="html">Getting started with Discord bot</title><link href="/getting-started-with-discord-bot/" rel="alternate" type="text/html" title="Getting started with Discord bot" /><published>2018-12-07T00:00:00+00:00</published><updated>2018-12-07T00:00:00+00:00</updated><id>/getting-started-with-discord-bot</id><content type="html" xml:base="/getting-started-with-discord-bot/">&lt;p&gt;If you want to write Discord bot, there are several options for getting started. I’ll describe what I checked when I started looking at that.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://80.211.137.87:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://80.211.137.87:4000/" rel="alternate" type="text/html" /><updated>2019-02-06T21:58:00+00:00</updated><id>http://80.211.137.87:4000/feed.xml</id><title type="html">robdy</title><subtitle>In-free-time developer</subtitle><entry><title type="html">Host Skype for Business meetings like a professional</title><link href="http://80.211.137.87:4000/host-sfb-meetings-like-a-pro/" rel="alternate" type="text/html" title="Host Skype for Business meetings like a professional" /><published>2019-01-29T00:00:00+00:00</published><updated>2019-01-29T00:00:00+00:00</updated><id>http://80.211.137.87:4000/host-sfb-meetings-like-a-pro</id><content type="html" xml:base="http://80.211.137.87:4000/host-sfb-meetings-like-a-pro/">&lt;p&gt;In that post I’d like to share some of the best practices for organizing meetings. Please note that &lt;strong&gt;I only focus on technical aspects&lt;/strong&gt; (configuration of Outlook and Skype for Business) and assume that you know the basics (like preparing the agenda, clarifying the purpose of the meeting, choosing appropriate content for the audience) I also assume that your Skype for Business is working correctly (you have enough bandwidth, stable connection).&lt;/p&gt;
+
+&lt;h2 id=&quot;checklist-only&quot;&gt;Checklist only&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Make sure to specify if you want to receive responses to the invitation&lt;/li&gt;
+  &lt;li&gt;Limit the presenter role to the people who need it&lt;/li&gt;
+  &lt;li&gt;Mute all attendees and block attendees’ video&lt;/li&gt;
+  &lt;li&gt;Upload the presentation before the meeting&lt;/li&gt;
+  &lt;li&gt;Make the presentation downloadable (including notes and annotations) if you wish&lt;/li&gt;
+  &lt;li&gt;While sharing content other than presentation – use desktop sharing&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;nav&gt;
+  &lt;h4&gt;Table of Contents&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#checklist-only&quot; id=&quot;markdown-toc-checklist-only&quot;&gt;Checklist only&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#frequent-issues&quot; id=&quot;markdown-toc-frequent-issues&quot;&gt;Frequent issues&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#start-with-the-invitation&quot; id=&quot;markdown-toc-start-with-the-invitation&quot;&gt;Start with the invitation&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#response-options&quot; id=&quot;markdown-toc-response-options&quot;&gt;Response options&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#skype-meeting-options&quot; id=&quot;markdown-toc-skype-meeting-options&quot;&gt;Skype meeting options&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#presenter-or-attendee&quot; id=&quot;markdown-toc-presenter-or-attendee&quot;&gt;Presenter or attendee?&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#available-skype-meeting-options&quot; id=&quot;markdown-toc-available-skype-meeting-options&quot;&gt;Available Skype meeting options&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#during-the-meeting&quot; id=&quot;markdown-toc-during-the-meeting&quot;&gt;During the meeting&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#powerpoint-presentation&quot; id=&quot;markdown-toc-powerpoint-presentation&quot;&gt;PowerPoint presentation&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#participant-actions&quot; id=&quot;markdown-toc-participant-actions&quot;&gt;Participant actions&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#desktop-sharing&quot; id=&quot;markdown-toc-desktop-sharing&quot;&gt;Desktop sharing&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/nav&gt;
+
+&lt;h2 id=&quot;frequent-issues&quot;&gt;Frequent issues&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;People join with unmuted microphone and they interrupt the audio before they even realize everyone can hear them&lt;/li&gt;
+  &lt;li&gt;Presenter is removed from the meeting by misclick of one of the participants&lt;/li&gt;
+  &lt;li&gt;Someone ends the meeting in the middle of the conversation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Below I’m addressing these issues and also suggest what you can do more.&lt;/p&gt;
+
+&lt;h2 id=&quot;start-with-the-invitation&quot;&gt;Start with the invitation&lt;/h2&gt;
+&lt;p&gt;When you create the meeting, there are some useful options which could make your life easier (and in the same time, make you look more professional):&lt;/p&gt;
+
+&lt;h3 id=&quot;response-options&quot;&gt;Response options&lt;/h3&gt;
+
+&lt;p&gt;On ‘Meeting’ ribbon in your Outlook you can specify whether you want to receive all the responses to your mailbox. For big meetings it’s usually good to unmark the option and avoid reply flood (if you really need it, you can &lt;a href=&quot;https://support.office.com/en-us/article/use-inbox-rules-in-outlook-com-4b094371-a5d7-49bd-8b1b-4e4896a7cc5d&quot; target=&quot;_blank&quot;&gt;create a rule in Outlook&lt;/a&gt; to redirect the replies to a folder).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/2019-01-31 15_35_58-Untitled - Meeting.png&quot; alt=&quot;2019-01-31 15_35_58-Untitled - Meeting.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The invitees will see the information that the organizer hasn’t requested the response for the invitation.&lt;/p&gt;
+
+&lt;p&gt;When someone accepts the meeting you, as an organizer, won’t receive the responses but also &lt;strong&gt;won’t be able to track who accepted the meeting&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;skype-meeting-options&quot;&gt;Skype meeting options&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;It is important to set the settings during the initial planning. Any changes performed later might not reflect immediately!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;To change the meeting options, you need to go to ‘Meeting Options’ on the ribbon:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/2019-01-31 15_36_16-Untitled - Meeting.png&quot; alt=&quot;2019-01-31 15_36_16-Untitled - Meeting.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here’s the list of options available for Skype for Business meeting with the suggested configuration:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/2019-01-29 09_37_13-Test meeting - Meeting.png&quot; alt=&quot;2019-01-29 09_37_13-Test meeting - Meeting.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;presenter-or-attendee&quot;&gt;Presenter or attendee?&lt;/h4&gt;
+
+&lt;p&gt;Before going further it’s important to understand the difference beetween the presenter and an attendee.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Presenter&lt;/strong&gt;, in contrary to &lt;strong&gt;attendee&lt;/strong&gt; is able to do anything with the meeting (share audio and video, present desktop, mute and remove participants and even &lt;strong&gt;end the meeting&lt;/strong&gt;).&lt;/p&gt;
+
+&lt;p&gt;An &lt;strong&gt;attendee&lt;/strong&gt; can only hear, chat and talk, nothing else.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;During the meeting, any presenter is able to make another attendee a presenter&lt;/strong&gt; by right-clicking the attendee and choosing &lt;code class=&quot;highlighter-rouge&quot;&gt;Make a presenter&lt;/code&gt; option:
+&lt;img src=&quot;/images/posts/2019-01-29 09_47_22-Meeting.png&quot; alt=&quot;2019-01-29 09_47_22-Meeting.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;available-skype-meeting-options&quot;&gt;Available Skype meeting options&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;These people don’t have to wait in the lobby&lt;br /&gt;
+You can select who will have to wait until &lt;strong&gt;presenter&lt;/strong&gt; allows them to enter the meeting. I recommend setting this to &lt;code class=&quot;highlighter-rouge&quot;&gt;Anyone (no restrictions)&lt;/code&gt; to not have to approve each user entering the meeting.&lt;/p&gt;
+
+    &lt;p&gt;Two options below are self-explanatory. &lt;code class=&quot;highlighter-rouge&quot;&gt;Callers get in directly&lt;/code&gt; allows people who call in with a phone to be connected automatically. The second one &lt;code class=&quot;highlighter-rouge&quot;&gt;Announce when people enter or leave&lt;/code&gt; is usually not recommended for large meetings (imagine 200 people entering and each of them being announced)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Who’s a presenter?&lt;br /&gt;
+It’s crucial to choose the appropriate option here. I recommend &lt;code class=&quot;highlighter-rouge&quot;&gt;Only me, the meeting organizer&lt;/code&gt; (provided that you are sure you join the meeting).
+ The alternate option would be to choose the presenters upfront (the option &lt;code class=&quot;highlighter-rouge&quot;&gt;People I choose&lt;/code&gt; lets you to add anyone you want to the list of presenters)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Do you want to limit participation?&lt;br /&gt;
+I recommend choosing &lt;code class=&quot;highlighter-rouge&quot;&gt;Mute all attendees&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Block attendees' video&lt;/code&gt;. Therefore, all the participants who join the meeting will be muted by default. They won’t be able to speak until the audience is unmuted (see &lt;a href=&quot;#participant-actions&quot;&gt;participant actions&lt;/a&gt; to learn how to do this).&lt;/p&gt;
+
+    &lt;p class=&quot;message&quot;&gt;&lt;strong&gt;Note&lt;/strong&gt;: people who joined via phone will still be able to unmute themselves.&lt;/p&gt;
+    &lt;p&gt;IM (chat) is usually useful to confirm that people are able to hear you and can see the presentation.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can also check which setting is recommended for your scenario &lt;a href=&quot;https://support.office.com/en-us/article/change-participant-settings-for-skype-for-business-meetings-9175e297-de5f-43b2-8e0f-85cc05e24986&quot; target=&quot;_blank&quot;&gt;on Microsoft KB article&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;during-the-meeting&quot;&gt;During the meeting&lt;/h2&gt;
+
+&lt;h3 id=&quot;powerpoint-presentation&quot;&gt;PowerPoint presentation&lt;/h3&gt;
+
+&lt;p&gt;If you plan to share PowerPoint presentation, make sure to use &lt;code class=&quot;highlighter-rouge&quot;&gt;Share PowerPoint Files&lt;/code&gt; option instead of desktop sharing. This will upload the presentation to Skype for Business server and it won’t rely on your network connectivity. &lt;strong&gt;Remember that it takes some time to upload the file especially if it contains many slides&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you want people to be able to download the presentation you can allow everyone to download it. By default it’s limited to the presenters (see &lt;a href=&quot;#presenter-or-attendee&quot;&gt;Presenter or attendee?&lt;/a&gt; and once again make sure you’ve chosen the proper option).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/2019-01-29 10_24_55-.png&quot; alt=&quot;2019-01-29 10_24_55-.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: Be aware that people who can download the presentation, as well as all the presenters, will see the notes which you made to the slides!&lt;/p&gt;
+
+&lt;h3 id=&quot;participant-actions&quot;&gt;Participant actions&lt;/h3&gt;
+
+&lt;p&gt;Below the list of participants you can find ‘Participant Actions’ button:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/2019-01-29 10_44_12-.png&quot; alt=&quot;2019-01-29 10_44_12-.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once you click it, new window will be opened with various options available:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/2019-01-29 10_57_02-.png&quot; alt=&quot;2019-01-29 10_57_02-.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mute audience&lt;br /&gt;
+  Using that option will mute everyone except you. Presenters will be able to unmute, but attendees won’t be until you go to the same place and click ‘Unmute audience’. Quite useful option.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;Note&lt;/strong&gt;: people who joined via phone will still be able to unmute themselves.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;No meeting IM&lt;br /&gt;
+  Can be useful in some cases to avoid interruption from users during the presentation but in general I’d avoid that (IM/chat can be useful for people to report issues with the presentation/audio).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;No attendee video&lt;br /&gt;
+  Recommended for large meetings (avoids network utilization).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Hide names&lt;br /&gt;
+  Not necessarily needed (unless there’s special case).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Everyone an attendee&lt;br /&gt;
+  Must have if not set in the invitation.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Invite by email&lt;br /&gt;
+  Rarely used (usually if you forgot to invite someone you can just add them to the conference manually)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;desktop-sharing&quot;&gt;Desktop sharing&lt;/h3&gt;
+&lt;p&gt;If any additional content (other than PowerPoint presentation) must be shared, it’s generally preferred to use desktop sharing instead application sharing (it uses newer technology which is &lt;a href=&quot;http://blog.schertz.name/2015/10/video-based-screen-sharing-in-skype-for-business/&quot; target=&quot;_blank&quot;&gt;Video Based Screen Sharing&lt;/a&gt; and should work smoother). In addition, switching between windows is easier when you present your desktop than when you present specific application.&lt;/p&gt;
+
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;Note&lt;/strong&gt;: if at least one of your participants joins using outdated client version, screensharing will anyway fallback to RDP (old technology) but usually there isn’t much to avoid that.&lt;/p&gt;</content><author><name></name></author><summary type="html">In that post I’d like to share some of the best practices for organizing meetings. Please note that I only focus on technical aspects (configuration of Outlook and Skype for Business) and assume that you know the basics (like preparing the agenda, clarifying the purpose of the meeting, choosing appropriate content for the audience) I also assume that your Skype for Business is working correctly (you have enough bandwidth, stable connection). Checklist only Make sure to specify if you want to receive responses to the invitation Limit the presenter role to the people who need it Mute all attendees and block attendees’ video Upload the presentation before the meeting Make the presentation downloadable (including notes and annotations) if you wish While sharing content other than presentation – use desktop sharing</summary></entry><entry><title type="html">Getting started with Discord bot</title><link href="http://80.211.137.87:4000/getting-started-with-discord-bot/" rel="alternate" type="text/html" title="Getting started with Discord bot" /><published>2018-12-07T00:00:00+00:00</published><updated>2018-12-07T00:00:00+00:00</updated><id>http://80.211.137.87:4000/getting-started-with-discord-bot</id><content type="html" xml:base="http://80.211.137.87:4000/getting-started-with-discord-bot/">&lt;p&gt;If you want to write Discord bot, there are several options for getting started. I’ll describe what I checked when I started looking at that.&lt;/p&gt;
 
 &lt;h3 id=&quot;no-coding-at-all&quot;&gt;No coding at all&lt;/h3&gt;
 
@@ -51,7 +215,7 @@
 
 &lt;p&gt;Now you just need to upvote something using your account. You might sometimes use &lt;code class=&quot;highlighter-rouge&quot;&gt;Check now&lt;/code&gt; if the applet doesn’t run &lt;del&gt;and you’re impatient as me&lt;/del&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/posts/2018-12-07 12_25_29-If New upvoted post by _u_robdy, then Make a web request - IFTTT.png&quot; alt=&quot;2018-12-07 12_25_29-If New upvoted post by _u_robdy, then Make a web request - IFTTT.png&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">If you want to write Discord bot, there are several options for getting started. I’ll describe what I checked when I started looking at that. No coding at all My first attempt was based on Mark Ramsey’s article. If you happen to follow Tweets of specific user and post them to your Discord, read it and you’re done. However, if you need to do anything else (i.e reposting top Reddit posts from specific sub, getting weather alerts etc.), follow this tutorial.</summary></entry><entry><title type="html">Setup Jekyll blog with Netlify</title><link href="/setup-jekyll-blog-with-netlify/" rel="alternate" type="text/html" title="Setup Jekyll blog with Netlify" /><published>2018-01-31T00:00:00+00:00</published><updated>2018-01-31T00:00:00+00:00</updated><id>/setup-jekyll-blog-with-netlify</id><content type="html" xml:base="/setup-jekyll-blog-with-netlify/">&lt;p&gt;As I’m not (yet) very experienced with web developing this guide can be obvious. However, it’s worth noted (at least for me) so I can check it if I have to go through the setup process again.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/2018-12-07 12_25_29-If New upvoted post by _u_robdy, then Make a web request - IFTTT.png&quot; alt=&quot;2018-12-07 12_25_29-If New upvoted post by _u_robdy, then Make a web request - IFTTT.png&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">If you want to write Discord bot, there are several options for getting started. I’ll describe what I checked when I started looking at that. No coding at all My first attempt was based on Mark Ramsey’s article. If you happen to follow Tweets of specific user and post them to your Discord, read it and you’re done. However, if you need to do anything else (i.e reposting top Reddit posts from specific sub, getting weather alerts etc.), follow this tutorial.</summary></entry><entry><title type="html">Setup Jekyll blog with Netlify</title><link href="http://80.211.137.87:4000/setup-jekyll-blog-with-netlify/" rel="alternate" type="text/html" title="Setup Jekyll blog with Netlify" /><published>2018-01-31T00:00:00+00:00</published><updated>2018-01-31T00:00:00+00:00</updated><id>http://80.211.137.87:4000/setup-jekyll-blog-with-netlify</id><content type="html" xml:base="http://80.211.137.87:4000/setup-jekyll-blog-with-netlify/">&lt;p&gt;As I’m not (yet) very experienced with web developing this guide can be obvious. However, it’s worth noted (at least for me) so I can check it if I have to go through the setup process again.&lt;/p&gt;
 
 &lt;h2 id=&quot;how-to-setup-jekyll-blog&quot;&gt;How to setup Jekyll blog&lt;/h2&gt;
 &lt;p&gt;I decided to try setting up blog using Jekyll. As a base of it I used &lt;a href=&quot;https://github.com/barryclark/jekyll-now&quot;&gt;jekyll-now&lt;/a&gt; repo.&lt;/p&gt;
@@ -115,7 +279,7 @@
 
 &lt;p&gt;Just one more thing - to also see drafts on the webpage I had to adjust the settings a bit:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/posts/2018-01-31 22_34_53-Build &amp;amp; deploy _ Settings.png&quot; alt=&quot;2018-01-31 22_34_53-Build &amp;amp; deploy _ Settings.png&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">As I’m not (yet) very experienced with web developing this guide can be obvious. However, it’s worth noted (at least for me) so I can check it if I have to go through the setup process again. How to setup Jekyll blog I decided to try setting up blog using Jekyll. As a base of it I used jekyll-now repo. GitHub Pages For running it on GitHub Pages it was pretty easy, as written in the documentation. Just fork, rename repo to yourusername.github.io, wait up to 10 mins and you’re all set. However, as GitHub Pages don’t support (and as far as I know don’t plan to) HTTPS for custom domains I tried to use Netlify as another platform to host it. Update 2018-05-01: the above statement about GH Pages not supporting custom domains SSL is no longer valid as per that announcement. Netlify One of the services that supports HTTPS for custom domains is Netlify. I quickly found this instruction. However, it turned out it’s not so easy as described in the article.</summary></entry><entry><title type="html">Searching in whole forest</title><link href="/searching-in-whole-forest/" rel="alternate" type="text/html" title="Searching in whole forest" /><published>2017-12-19T00:00:00+00:00</published><updated>2017-12-19T00:00:00+00:00</updated><id>/searching-in-whole-forest</id><content type="html" xml:base="/searching-in-whole-forest/">&lt;p&gt;When you want to find a user in Active Directory you usually use:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/2018-01-31 22_34_53-Build &amp;amp; deploy _ Settings.png&quot; alt=&quot;2018-01-31 22_34_53-Build &amp;amp; deploy _ Settings.png&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">As I’m not (yet) very experienced with web developing this guide can be obvious. However, it’s worth noted (at least for me) so I can check it if I have to go through the setup process again. How to setup Jekyll blog I decided to try setting up blog using Jekyll. As a base of it I used jekyll-now repo. GitHub Pages For running it on GitHub Pages it was pretty easy, as written in the documentation. Just fork, rename repo to yourusername.github.io, wait up to 10 mins and you’re all set. However, as GitHub Pages don’t support (and as far as I know don’t plan to) HTTPS for custom domains I tried to use Netlify as another platform to host it. Update 2018-05-01: the above statement about GH Pages not supporting custom domains SSL is no longer valid as per that announcement. Netlify One of the services that supports HTTPS for custom domains is Netlify. I quickly found this instruction. However, it turned out it’s not so easy as described in the article.</summary></entry><entry><title type="html">Searching in whole forest</title><link href="http://80.211.137.87:4000/searching-in-whole-forest/" rel="alternate" type="text/html" title="Searching in whole forest" /><published>2017-12-19T00:00:00+00:00</published><updated>2017-12-19T00:00:00+00:00</updated><id>http://80.211.137.87:4000/searching-in-whole-forest</id><content type="html" xml:base="http://80.211.137.87:4000/searching-in-whole-forest/">&lt;p&gt;When you want to find a user in Active Directory you usually use:&lt;/p&gt;
 
 &lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;Get-ADUser&lt;/span&gt; -Filter &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;SamAccountName -eq &lt;span class=&quot;s2&quot;&gt;&quot;User1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -133,7 +297,7 @@
 &lt;p&gt;If you don’t know the name of your DC you can try to use the DC you authenticates to:&lt;/p&gt;
 
 &lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;Get-ADUser&lt;/span&gt; -Filter &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;SamAccountName -eq &lt;span class=&quot;s2&quot;&gt;&quot;User1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; -Server &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Get-ADDomainController&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.Name&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;:3268&lt;span class=&quot;s2&quot;&gt;&quot;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">When you want to find a user in Active Directory you usually use: Get-ADUser -Filter {SamAccountName -eq &quot;User1&quot;} However, if you are in multi-domain environment and you’re looking for the user from another domain you’ll receive the error: Get-ADUser : Cannot find an object with identity: 'User1' under: 'DC=europe,DC=domain,DC=com'. To resolve this issue you have to send your query to Global Catalog directly. If your Domain Controller is also Global Catalog you can do it by specyfying server with port 3268: Get-ADUser -Filter {SamAccountName -eq &quot;User1&quot;} -Server &quot;DC1:3268&quot; If you don’t know the name of your DC you can try to use the DC you authenticates to: Get-ADUser -Filter {SamAccountName -eq &quot;User1&quot;} -Server &quot;$((Get-ADDomainController).Name):3268&quot;</summary></entry><entry><title type="html">Installing Outlook add-in for specific users</title><link href="/installing-outlook-add-in-for-specific-users/" rel="alternate" type="text/html" title="Installing Outlook add-in for specific users" /><published>2017-08-10T00:00:00+00:00</published><updated>2017-08-10T00:00:00+00:00</updated><id>/installing-outlook-add-in-for-specific-users</id><content type="html" xml:base="/installing-outlook-add-in-for-specific-users/">&lt;p&gt;Goal: to install Outlook add-in available only for specific users and to make it enable by default&lt;/p&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">When you want to find a user in Active Directory you usually use: Get-ADUser -Filter {SamAccountName -eq &quot;User1&quot;} However, if you are in multi-domain environment and you’re looking for the user from another domain you’ll receive the error: Get-ADUser : Cannot find an object with identity: 'User1' under: 'DC=europe,DC=domain,DC=com'. To resolve this issue you have to send your query to Global Catalog directly. If your Domain Controller is also Global Catalog you can do it by specyfying server with port 3268: Get-ADUser -Filter {SamAccountName -eq &quot;User1&quot;} -Server &quot;DC1:3268&quot; If you don’t know the name of your DC you can try to use the DC you authenticates to: Get-ADUser -Filter {SamAccountName -eq &quot;User1&quot;} -Server &quot;$((Get-ADDomainController).Name):3268&quot;</summary></entry><entry><title type="html">Installing Outlook add-in for specific users</title><link href="http://80.211.137.87:4000/installing-outlook-add-in-for-specific-users/" rel="alternate" type="text/html" title="Installing Outlook add-in for specific users" /><published>2017-08-10T00:00:00+00:00</published><updated>2017-08-10T00:00:00+00:00</updated><id>http://80.211.137.87:4000/installing-outlook-add-in-for-specific-users</id><content type="html" xml:base="http://80.211.137.87:4000/installing-outlook-add-in-for-specific-users/">&lt;p&gt;Goal: to install Outlook add-in available only for specific users and to make it enable by default&lt;/p&gt;
 
 &lt;h3 id=&quot;1st-attempt&quot;&gt;1st attempt:&lt;/h3&gt;
 
@@ -172,7 +336,7 @@
 &lt;p&gt;If you receive an error ‘There are multiple recipients matching the identity’ you can use the following code:&lt;/p&gt;
 &lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0; &lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt; -lt &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$t&lt;/span&gt;.UserList.Count&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;; &lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;++&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$t&lt;/span&gt;.UserList[&lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Get-Mailbox &lt;span class=&quot;nv&quot;&gt;$t&lt;/span&gt;.UserList[&lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -RecipientTypeDetails UserMailbox&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.userprincipalname
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Goal: to install Outlook add-in available only for specific users and to make it enable by default 1st attempt: If you open Exchange admin center &amp;gt; organization &amp;gt; add-ins and try to add it from there: you’ll not be able to set it provided only to specific user. You can only set its default state for enabled/disabled or make it available to nobody:</summary></entry><entry><title type="html">PowerShell tip - skip “Get”</title><link href="/powershell-tip-skip-get/" rel="alternate" type="text/html" title="PowerShell tip - skip &quot;Get&quot;" /><published>2017-07-28T00:00:00+00:00</published><updated>2017-07-28T00:00:00+00:00</updated><id>/powershell-tip-skip-get</id><content type="html" xml:base="/powershell-tip-skip-get/">&lt;p&gt;Interesting thing which I discovered today (BTW, SysAdmin day). In PowerShell you can skip the verb “Get” (at least for most cmdlets – it wasn’t working for Get-Process).&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Goal: to install Outlook add-in available only for specific users and to make it enable by default 1st attempt: If you open Exchange admin center &amp;gt; organization &amp;gt; add-ins and try to add it from there: you’ll not be able to set it provided only to specific user. You can only set its default state for enabled/disabled or make it available to nobody:</summary></entry><entry><title type="html">PowerShell tip - skip “Get”</title><link href="http://80.211.137.87:4000/powershell-tip-skip-get/" rel="alternate" type="text/html" title="PowerShell tip - skip &quot;Get&quot;" /><published>2017-07-28T00:00:00+00:00</published><updated>2017-07-28T00:00:00+00:00</updated><id>http://80.211.137.87:4000/powershell-tip-skip-get</id><content type="html" xml:base="http://80.211.137.87:4000/powershell-tip-skip-get/">&lt;p&gt;Interesting thing which I discovered today (BTW, SysAdmin day). In PowerShell you can skip the verb “Get” (at least for most cmdlets – it wasn’t working for Get-Process).&lt;/p&gt;
 
 &lt;p&gt;So instead of using&lt;/p&gt;
 

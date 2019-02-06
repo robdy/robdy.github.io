@@ -64,7 +64,7 @@
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <h1>
-        <a href="/">
+        <a href="http://80.211.137.87:4000/">
           robdy
         </a>
       </h1>
@@ -72,8 +72,7 @@
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="/">Home</a>
-
+      <a class="sidebar-nav-item" href="http://80.211.137.87:4000/">Home</a>
       
 
       
@@ -89,6 +88,12 @@
         
       
         
+          
+            <a class="sidebar-nav-item" href="/all/">All posts</a>
+          
+        
+      
+        
       
         
           
@@ -102,32 +107,60 @@
       
         
       
+        
+          
+        
+      
 
-    <a href="https://github.com/robdy/">View on GitHub</a>
+    <a href="https://github.com/robdy/robdy.github.io" target="_blank" rel="noopener noreferrer">View on GitHub</a>
       
     </nav>
 
-    <p>&copy; 2019. All rights reserved.</p>
+    <p>© 2019. All rights reserved.</p>
   </div>
 </div>
 
 
     <div class="content container">
-      <div class="post">
+      <article>
+<div class="post">
   <h1 class="post-title">Setup Jekyll blog with Netlify</h1>
   <span class="post-date">31 Jan 2018</span>
   <p>As I’m not (yet) very experienced with web developing this guide can be obvious. However, it’s worth noted (at least for me) so I can check it if I have to go through the setup process again.</p>
 
-<h2 id="how-to-setup-jekyll-blog">How to setup Jekyll blog</h2>
-<p>I decided to try setting up blog using Jekyll. As a base of it I used <a href="https://github.com/barryclark/jekyll-now">jekyll-now</a> repo.</p>
 
-<h3 id="github-pages">GitHub Pages</h3>
-<p>For running it on GitHub Pages it was pretty easy, as written in the documentation. Just fork, rename repo to yourusername.github.io, wait up to 10 mins and you’re all set. <del>However, as GitHub Pages don’t support (and as far as I know don’t plan to) HTTPS for custom domains</del> I tried to use <a href="https://netlify.com">Netlify</a> as another platform to host it.</p>
+      <h2 id="how-to-setup-jekyll-blog">
+        
+        
+          How to setup Jekyll blog <a href="#how-to-setup-jekyll-blog" class="header-anchor">#</a>
+        
+        
+      </h2>
+<p>I decided to try setting up blog using Jekyll. As a base of it I used <a href="https://github.com/barryclark/jekyll-now" target="_blank" rel="noopener noreferrer">jekyll-now</a> repo.</p>
 
-<p><strong>Update 2018-05-01</strong>: the above statement about GH Pages not supporting custom domains SSL is no longer valid as per <a href="https://blog.github.com/2018-05-01-github-pages-custom-domains-https/">that announcement</a>.</p>
 
-<h3 id="netlify">Netlify</h3>
-<p>One of the services that supports HTTPS for custom domains is <a href="https://netlify.com">Netlify</a>. I quickly found <a href="https://www.netlify.com/blog/2015/10/28/a-step-by-step-guide-jekyll-3.0-on-netlify/">this instruction</a>.</p>
+    
+      <h3 id="github-pages">
+        
+        
+          GitHub Pages <a href="#github-pages" class="header-anchor">#</a>
+        
+        
+      </h3>
+<p>For running it on GitHub Pages it was pretty easy, as written in the documentation. Just fork, rename repo to yourusername.github.io, wait up to 10 mins and you’re all set. <del>However, as GitHub Pages don’t support (and as far as I know don’t plan to) HTTPS for custom domains</del> I tried to use <a href="https://netlify.com" target="_blank" rel="noopener noreferrer">Netlify</a> as another platform to host it.</p>
+
+<p><strong>Update 2018-05-01</strong>: the above statement about GH Pages not supporting custom domains SSL is no longer valid as per <a href="https://blog.github.com/2018-05-01-github-pages-custom-domains-https/" target="_blank" rel="noopener noreferrer">that announcement</a>.</p>
+
+
+    
+      <h3 id="netlify">
+        
+        
+          Netlify <a href="#netlify" class="header-anchor">#</a>
+        
+        
+      </h3>
+<p>One of the services that supports HTTPS for custom domains is <a href="https://netlify.com" target="_blank" rel="noopener noreferrer">Netlify</a>. I quickly found <a href="https://www.netlify.com/blog/2015/10/28/a-step-by-step-guide-jekyll-3.0-on-netlify/" target="_blank" rel="noopener noreferrer">this instruction</a>.</p>
 
 <p>However, it turned out it’s not so easy as described in the article.</p>
 
@@ -176,17 +209,25 @@
 
 <p>That’s it! After that I received <code class="highlighter-rouge">Site is live</code> and I was able to see the welcome page</p>
 
-<p><img src="/images/posts/2018-01-31 22_32_33-Rob Dy – In-free-time developer.png" alt="2018-01-31 22_32_33-Rob Dy – In-free-time developer.png" /></p>
+<p><img src="/images/posts/2018-01-31%2022_32_33-Rob%20Dy%20%E2%80%93%20In-free-time%20developer.png" alt="2018-01-31 22_32_33-Rob Dy – In-free-time developer.png"></p>
 
 <p>Just one more thing - to also see drafts on the webpage I had to adjust the settings a bit:</p>
 
-<p><img src="/images/posts/2018-01-31 22_34_53-Build &amp; deploy _ Settings.png" alt="2018-01-31 22_34_53-Build &amp; deploy _ Settings.png" /></p>
-
+<p><img src="/images/posts/2018-01-31%2022_34_53-Build%20&amp;%20deploy%20_%20Settings.png" alt="2018-01-31 22_34_53-Build &amp; deploy _ Settings.png"></p>
 </div>
 
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/host-sfb-meetings-like-a-pro/">
+            Host Skype for Business meetings like a professional
+            <small>29 Jan 2019</small>
+          </a>
+        </h3>
+      </li>
     
       <li>
         <h3>
@@ -206,18 +247,32 @@
         </h3>
       </li>
     
-      <li>
-        <h3>
-          <a href="/installing-outlook-add-in-for-specific-users/">
-            Installing Outlook add-in for specific users
-            <small>10 Aug 2017</small>
-          </a>
-        </h3>
-      </li>
-    
   </ul>
 </div>
 
+
+
+<div class="comments">
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://80.211.137.87:4000/setup-jekyll-blog-with-netlify/"
+      this.page.identifier = "/setup-jekyll-blog-with-netlify";
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://robdy.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener noreferrer">comments powered by Disqus.</a>
+</noscript>
+</div>
+
+
+                            
+</article>
     </div>
 
   </body>

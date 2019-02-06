@@ -64,7 +64,7 @@
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <h1>
-        <a href="/">
+        <a href="http://80.211.137.87:4000/">
           robdy
         </a>
       </h1>
@@ -72,8 +72,7 @@
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="/">Home</a>
-
+      <a class="sidebar-nav-item" href="http://80.211.137.87:4000/">Home</a>
       
 
       
@@ -89,6 +88,12 @@
         
       
         
+          
+            <a class="sidebar-nav-item" href="/all/">All posts</a>
+          
+        
+      
+        
       
         
           
@@ -102,18 +107,23 @@
       
         
       
+        
+          
+        
+      
 
-    <a href="https://github.com/robdy/">View on GitHub</a>
+    <a href="https://github.com/robdy/robdy.github.io" target="_blank" rel="noopener noreferrer">View on GitHub</a>
       
     </nav>
 
-    <p>&copy; 2019. All rights reserved.</p>
+    <p>© 2019. All rights reserved.</p>
   </div>
 </div>
 
 
     <div class="content container">
-      <div class="post">
+      <article>
+<div class="post">
   <h1 class="post-title">Searching in whole forest</h1>
   <span class="post-date">19 Dec 2017</span>
   <p>When you want to find a user in Active Directory you usually use:</p>
@@ -135,12 +145,20 @@
 
 <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">Get-ADUser</span> -Filter <span class="o">{</span>SamAccountName -eq <span class="s2">"User1"</span><span class="o">}</span> -Server <span class="s2">"</span><span class="k">$((</span><span class="nb">Get-ADDomainController</span><span class="o">)</span>.Name<span class="o">)</span>:3268<span class="s2">"
 </span></code></pre></div></div>
-
 </div>
 
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/host-sfb-meetings-like-a-pro/">
+            Host Skype for Business meetings like a professional
+            <small>29 Jan 2019</small>
+          </a>
+        </h3>
+      </li>
     
       <li>
         <h3>
@@ -160,18 +178,32 @@
         </h3>
       </li>
     
-      <li>
-        <h3>
-          <a href="/installing-outlook-add-in-for-specific-users/">
-            Installing Outlook add-in for specific users
-            <small>10 Aug 2017</small>
-          </a>
-        </h3>
-      </li>
-    
   </ul>
 </div>
 
+
+
+<div class="comments">
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://80.211.137.87:4000/searching-in-whole-forest/"
+      this.page.identifier = "/searching-in-whole-forest";
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://robdy.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener noreferrer">comments powered by Disqus.</a>
+</noscript>
+</div>
+
+
+                            
+</article>
     </div>
 
   </body>

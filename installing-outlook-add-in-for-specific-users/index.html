@@ -64,7 +64,7 @@
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <h1>
-        <a href="/">
+        <a href="http://80.211.137.87:4000/">
           robdy
         </a>
       </h1>
@@ -72,8 +72,7 @@
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="/">Home</a>
-
+      <a class="sidebar-nav-item" href="http://80.211.137.87:4000/">Home</a>
       
 
       
@@ -89,6 +88,12 @@
         
       
         
+          
+            <a class="sidebar-nav-item" href="/all/">All posts</a>
+          
+        
+      
+        
       
         
           
@@ -102,42 +107,70 @@
       
         
       
+        
+          
+        
+      
 
-    <a href="https://github.com/robdy/">View on GitHub</a>
+    <a href="https://github.com/robdy/robdy.github.io" target="_blank" rel="noopener noreferrer">View on GitHub</a>
       
     </nav>
 
-    <p>&copy; 2019. All rights reserved.</p>
+    <p>© 2019. All rights reserved.</p>
   </div>
 </div>
 
 
     <div class="content container">
-      <div class="post">
+      <article>
+<div class="post">
   <h1 class="post-title">Installing Outlook add-in for specific users</h1>
   <span class="post-date">10 Aug 2017</span>
   <p>Goal: to install Outlook add-in available only for specific users and to make it enable by default</p>
 
-<h3 id="1st-attempt">1st attempt:</h3>
+
+      <h3 id="1st-attempt">
+        
+        
+          1st attempt: <a href="#1st-attempt" class="header-anchor">#</a>
+        
+        
+      </h3>
 
 <p>If you open Exchange admin center &gt; organization &gt; add-ins and try to add it from there:</p>
 
-<p><img src="/images/posts/2017-08-10-16_24_04-add-ins-microsoft-exchange.png" alt="2017-08-10-16_24_04-add-ins-microsoft-exchange.png" /></p>
+<p><img src="/images/posts/2017-08-10-16_24_04-add-ins-microsoft-exchange.png" alt="2017-08-10-16_24_04-add-ins-microsoft-exchange.png"></p>
 
 <p>you’ll not be able to set it provided only to specific user. You can only set its default state for enabled/disabled or make it available to nobody:</p>
 
-<p><img src="/images/posts/2017-08-10-16_29_20-edit-add-in-settings.png" alt="2017-08-10-16_29_20-edit-add-in-settings.png" /></p>
+<p><img src="/images/posts/2017-08-10-16_29_20-edit-add-in-settings.png" alt="2017-08-10-16_29_20-edit-add-in-settings.png"></p>
 
 <!--more-->
 
-<h3 id="2nd-attempt">2nd attempt:</h3>
+
+    
+      <h3 id="2nd-attempt">
+        
+        
+          2nd attempt: <a href="#2nd-attempt" class="header-anchor">#</a>
+        
+        
+      </h3>
 
 <p>This time using Windows PowerShell:</p>
 <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>New-App -Url <span class="s2">"https://xxxxxxxx.azurewebsites.net/app-manifest-tst.xml"</span> -OrganizationApp -UserList robert@domain.com,peter@domain.com -DefaultStateForUser Enabled
 </code></pre></div></div>
 <p>Surprisingly, this will install add-in enabled by default for all users.</p>
 
-<h3 id="3rd-attempt">3rd attempt:</h3>
+
+    
+      <h3 id="3rd-attempt">
+        
+        
+          3rd attempt: <a href="#3rd-attempt" class="header-anchor">#</a>
+        
+        
+      </h3>
 
 <p>This time I read the documentation more carefully and added this:</p>
 <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-ProvidedTo SpecificUsers
@@ -156,12 +189,20 @@
 <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="o">(</span><span class="nv">$i</span><span class="o">=</span>0; <span class="nv">$i</span> -lt <span class="o">(</span><span class="nv">$t</span>.UserList.Count<span class="o">)</span>; <span class="nv">$i</span>++<span class="o">)</span> <span class="o">{</span>
 <span class="nv">$t</span>.UserList[<span class="nv">$i</span><span class="o">]</span> <span class="o">=</span> <span class="o">(</span>Get-Mailbox <span class="nv">$t</span>.UserList[<span class="nv">$i</span><span class="o">]</span> -RecipientTypeDetails UserMailbox<span class="o">)</span>.userprincipalname
 </code></pre></div></div>
-
 </div>
 
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/host-sfb-meetings-like-a-pro/">
+            Host Skype for Business meetings like a professional
+            <small>29 Jan 2019</small>
+          </a>
+        </h3>
+      </li>
     
       <li>
         <h3>
@@ -181,18 +222,32 @@
         </h3>
       </li>
     
-      <li>
-        <h3>
-          <a href="/searching-in-whole-forest/">
-            Searching in whole forest
-            <small>19 Dec 2017</small>
-          </a>
-        </h3>
-      </li>
-    
   </ul>
 </div>
 
+
+
+<div class="comments">
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://80.211.137.87:4000/installing-outlook-add-in-for-specific-users/"
+      this.page.identifier = "/installing-outlook-add-in-for-specific-users";
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://robdy.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener noreferrer">comments powered by Disqus.</a>
+</noscript>
+</div>
+
+
+                            
+</article>
     </div>
 
   </body>
