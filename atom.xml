@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>robdy</title>
- <link href="http://80.211.137.87:4000/atom.xml" rel="self"/>
- <link href="http://80.211.137.87:4000/"/>
- <updated>2019-02-06T21:59:34+00:00</updated>
- <id>http://80.211.137.87:4000</id>
+ <link href="https://robdy.github.io/atom.xml" rel="self"/>
+ <link href="https://robdy.github.io/"/>
+ <updated>2019-02-06T22:07:33+00:00</updated>
+ <id>https://robdy.github.io</id>
  <author>
    <name></name>
    <email></email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Host Skype for Business meetings like a professional</title>
-   <link href="http://80.211.137.87:4000/host-sfb-meetings-like-a-pro/"/>
+   <link href="https://robdy.github.io/host-sfb-meetings-like-a-pro/"/>
    <updated>2019-01-29T00:00:00+00:00</updated>
-   <id>http://80.211.137.87:4000/host-sfb-meetings-like-a-pro</id>
+   <id>https://robdy.github.io/host-sfb-meetings-like-a-pro</id>
    <content type="html">&lt;p&gt;In that post I’d like to share some of the best practices for organizing meetings. Please note that &lt;strong&gt;I only focus on technical aspects&lt;/strong&gt; (configuration of Outlook and Skype for Business) and assume that you know the basics (like preparing the agenda, clarifying the purpose of the meeting, choosing appropriate content for the audience) I also assume that your Skype for Business is working correctly (you have enough bandwidth, stable connection).&lt;/p&gt;
 
 &lt;h2 id=&quot;checklist-only&quot;&gt;Checklist only&lt;/h2&gt;
@@ -187,9 +187,9 @@ I recommend choosing &lt;code class=&quot;highlighter-rouge&quot;&gt;Mute all at
  
  <entry>
    <title>Getting started with Discord bot</title>
-   <link href="http://80.211.137.87:4000/getting-started-with-discord-bot/"/>
+   <link href="https://robdy.github.io/getting-started-with-discord-bot/"/>
    <updated>2018-12-07T00:00:00+00:00</updated>
-   <id>http://80.211.137.87:4000/getting-started-with-discord-bot</id>
+   <id>https://robdy.github.io/getting-started-with-discord-bot</id>
    <content type="html">&lt;p&gt;If you want to write Discord bot, there are several options for getting started. I’ll describe what I checked when I started looking at that.&lt;/p&gt;
 
 &lt;h3 id=&quot;no-coding-at-all&quot;&gt;No coding at all&lt;/h3&gt;
@@ -249,9 +249,9 @@ I recommend choosing &lt;code class=&quot;highlighter-rouge&quot;&gt;Mute all at
  
  <entry>
    <title>Setup Jekyll blog with Netlify</title>
-   <link href="http://80.211.137.87:4000/setup-jekyll-blog-with-netlify/"/>
+   <link href="https://robdy.github.io/setup-jekyll-blog-with-netlify/"/>
    <updated>2018-01-31T00:00:00+00:00</updated>
-   <id>http://80.211.137.87:4000/setup-jekyll-blog-with-netlify</id>
+   <id>https://robdy.github.io/setup-jekyll-blog-with-netlify</id>
    <content type="html">&lt;p&gt;As I’m not (yet) very experienced with web developing this guide can be obvious. However, it’s worth noted (at least for me) so I can check it if I have to go through the setup process again.&lt;/p&gt;
 
 &lt;h2 id=&quot;how-to-setup-jekyll-blog&quot;&gt;How to setup Jekyll blog&lt;/h2&gt;
@@ -322,9 +322,9 @@ I recommend choosing &lt;code class=&quot;highlighter-rouge&quot;&gt;Mute all at
  
  <entry>
    <title>Searching in whole forest</title>
-   <link href="http://80.211.137.87:4000/searching-in-whole-forest/"/>
+   <link href="https://robdy.github.io/searching-in-whole-forest/"/>
    <updated>2017-12-19T00:00:00+00:00</updated>
-   <id>http://80.211.137.87:4000/searching-in-whole-forest</id>
+   <id>https://robdy.github.io/searching-in-whole-forest</id>
    <content type="html">&lt;p&gt;When you want to find a user in Active Directory you usually use:&lt;/p&gt;
 
 &lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;Get-ADUser&lt;/span&gt; -Filter &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;SamAccountName -eq &lt;span class=&quot;s2&quot;&gt;&quot;User1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
@@ -349,9 +349,9 @@ I recommend choosing &lt;code class=&quot;highlighter-rouge&quot;&gt;Mute all at
  
  <entry>
    <title>Installing Outlook add-in for specific users</title>
-   <link href="http://80.211.137.87:4000/installing-outlook-add-in-for-specific-users/"/>
+   <link href="https://robdy.github.io/installing-outlook-add-in-for-specific-users/"/>
    <updated>2017-08-10T00:00:00+00:00</updated>
-   <id>http://80.211.137.87:4000/installing-outlook-add-in-for-specific-users</id>
+   <id>https://robdy.github.io/installing-outlook-add-in-for-specific-users</id>
    <content type="html">&lt;p&gt;Goal: to install Outlook add-in available only for specific users and to make it enable by default&lt;/p&gt;
 
 &lt;h3 id=&quot;1st-attempt&quot;&gt;1st attempt:&lt;/h3&gt;
@@ -397,9 +397,9 @@ I recommend choosing &lt;code class=&quot;highlighter-rouge&quot;&gt;Mute all at
  
  <entry>
    <title>PowerShell tip - skip "Get"</title>
-   <link href="http://80.211.137.87:4000/powershell-tip-skip-get/"/>
+   <link href="https://robdy.github.io/powershell-tip-skip-get/"/>
    <updated>2017-07-28T00:00:00+00:00</updated>
-   <id>http://80.211.137.87:4000/powershell-tip-skip-get</id>
+   <id>https://robdy.github.io/powershell-tip-skip-get</id>
    <content type="html">&lt;p&gt;Interesting thing which I discovered today (BTW, SysAdmin day). In PowerShell you can skip the verb “Get” (at least for most cmdlets – it wasn’t working for Get-Process).&lt;/p&gt;
 
 &lt;p&gt;So instead of using&lt;/p&gt;
