@@ -1,4 +1,80 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://robdy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://robdy.github.io/" rel="alternate" type="text/html" /><updated>2019-07-02T08:58:34+00:00</updated><id>https://robdy.github.io/feed.xml</id><title type="html">robdy</title><subtitle>MS Teams and SfB specialist, developer in my free time</subtitle><entry><title type="html">Host Skype for Business meetings like a professional</title><link href="https://robdy.github.io/host-sfb-meetings-like-a-pro/" rel="alternate" type="text/html" title="Host Skype for Business meetings like a professional" /><published>2019-01-29T00:00:00+00:00</published><updated>2019-01-29T00:00:00+00:00</updated><id>https://robdy.github.io/host-sfb-meetings-like-a-pro</id><content type="html" xml:base="https://robdy.github.io/host-sfb-meetings-like-a-pro/">&lt;p&gt;In that post I’d like to share some of the best practices for organizing meetings. Please note that &lt;strong&gt;I only focus on technical aspects&lt;/strong&gt; (configuration of Outlook and Skype for Business) and assume that you know the basics (like preparing the agenda, clarifying the purpose of the meeting, choosing appropriate content for the audience) I also assume that your Skype for Business is working correctly (you have enough bandwidth, stable connection).&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://robdy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://robdy.github.io/" rel="alternate" type="text/html" /><updated>2020-02-14T07:48:02+00:00</updated><id>https://robdy.github.io/feed.xml</id><title type="html">robdy</title><subtitle>MS Teams and SfB specialist, developer in my free time</subtitle><entry><title type="html">How to import Excel file to existing SHP list</title><link href="https://robdy.github.io/import-excel-to-shp-list/" rel="alternate" type="text/html" title="How to import Excel file to existing SHP list" /><published>2020-02-14T00:00:00+00:00</published><updated>2020-02-14T00:00:00+00:00</updated><id>https://robdy.github.io/import-excel-to-shp-list</id><content type="html" xml:base="https://robdy.github.io/import-excel-to-shp-list/">&lt;p&gt;SharePoint doesn’t provide the out-of-the-box option to import data from Excel file to existing list. If you want to put some data from Excel to new list using &lt;code class=&quot;highlighter-rouge&quot;&gt;Import Spreadsheet&lt;/code&gt; app, but it’s not very flexible and sometimes problematic. For example, you have to use browser that supports ActiveX controls (&lt;a href=&quot;https://www.techwalla.com/articles/what-browsers-support-activex&quot;&gt;=Internet Explorer&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;There is, however, an interesting workaround which is based on PowerAutomate (formerly called MS Flow).&lt;/p&gt;
+
+&lt;p&gt;Let’s say that we have an existing list which we’d like to use for our leave request system. It contains 3 fields:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;title (we put user email here, string type)&lt;/li&gt;
+  &lt;li&gt;quota (number type)&lt;/li&gt;
+  &lt;li&gt;approver (we choose who will approve requests fot that user, field type is user/group)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;preparing-the-spreadsheet&quot;&gt;Preparing the spreadsheet&lt;/h2&gt;
+&lt;p&gt;If you want to import the spreadsheet, you need to remember that Excel connector for PowerAutomate only supports data from the table.
+If you’re not sure if your data is in the table, click on any cell and you should see additional tab &lt;code class=&quot;highlighter-rouge&quot;&gt;Design&lt;/code&gt; in the ribbon:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/import-excel-to-shp/new-tab-ribbon.png&quot; alt=&quot;new-tab-ribbon.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you’re not seeing it, click Ctrl+t to create new table:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/import-excel-to-shp/we-have-a-table.png&quot; alt=&quot;we-have-a-table.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now put the file in your OneDrive folder (you can also use your MS Group library or SharePoint) and you can start creating a flow.&lt;/p&gt;
+
+&lt;h2 id=&quot;creating-a-flow&quot;&gt;Creating a flow&lt;/h2&gt;
+
+&lt;p&gt;We’ll be using instant (manually trigered) flow:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/import-excel-to-shp/create-flow.png&quot; alt=&quot;create-flow.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We name it and choose &lt;code class=&quot;highlighter-rouge&quot;&gt;Manually trigger a flow&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/import-excel-to-shp/choose-a-trigger.png&quot; alt=&quot;choose-a-trigger.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Next action is &lt;code class=&quot;highlighter-rouge&quot;&gt;List rows present in a table&lt;/code&gt; from Excel Online (Business) connector.&lt;/p&gt;
+
+&lt;p&gt;We choose the file and proper table.&lt;/p&gt;
+
+&lt;p&gt;Then we add &lt;code class=&quot;highlighter-rouge&quot;&gt;Apply to each&lt;/code&gt; block and use the value from previous step:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/import-excel-to-shp/apply-to-each-input.png&quot; alt=&quot;apply-to-each-input.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Inside the block we use &lt;code class=&quot;highlighter-rouge&quot;&gt;Create item&lt;/code&gt; from &lt;code class=&quot;highlighter-rouge&quot;&gt;SharePoint&lt;/code&gt; connector.&lt;/p&gt;
+
+&lt;p&gt;For some of the fields, values might not be chooseable. This usually happens for types other than string (for &lt;code class=&quot;highlighter-rouge&quot;&gt;User/Group&lt;/code&gt; type we specify &lt;code class=&quot;highlighter-rouge&quot;&gt;Claims&lt;/code&gt; value which is also string) like numbers.&lt;/p&gt;
+
+&lt;p&gt;We can workaround this using the expression:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;item()?['PropertyName']
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/import-excel-to-shp/create-item-inside-loop.png&quot; alt=&quot;create-item-inside-loop.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If we save and refresh we’ll see that expression converted to the value similar to what we chosen for string-type fields:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/import-excel-to-shp/create-item-converted.png&quot; alt=&quot;create-item-converted.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now we can ‘test’ the flow (be careful as it will create items on the list, so it’s more ‘test in production’)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/import-excel-to-shp/test-in-production.png&quot; alt=&quot;test-in-production.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;sub&gt;Source: &lt;a href=&quot;https://community.spiceworks.com/topic/2026463-testing-upgrades-without-a-test-environment&quot;&gt;Spiceworks&lt;/a&gt;&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;In top-right corner we choose ‘Test’ link and specify to perform trigger action manually:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/import-excel-to-shp/test-flow.png&quot; alt=&quot;test-flow.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We create manuall-triggered flow so the wizard allows us to trigger it straight from the website. After we confirm the connectors being used:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/import-excel-to-shp/run-flow-2.png&quot; alt=&quot;run-flow-2.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can click ‘Continue’:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/import-excel-to-shp/run-flow-3.png&quot; alt=&quot;run-flow-3.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Aaaaand it runs:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/import-excel-to-shp/flow-started.png&quot; alt=&quot;flow-started.png&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">SharePoint doesn’t provide the out-of-the-box option to import data from Excel file to existing list. If you want to put some data from Excel to new list using Import Spreadsheet app, but it’s not very flexible and sometimes problematic. For example, you have to use browser that supports ActiveX controls (=Internet Explorer). There is, however, an interesting workaround which is based on PowerAutomate (formerly called MS Flow). Let’s say that we have an existing list which we’d like to use for our leave request system. It contains 3 fields: title (we put user email here, string type) quota (number type) approver (we choose who will approve requests fot that user, field type is user/group) Preparing the spreadsheet If you want to import the spreadsheet, you need to remember that Excel connector for PowerAutomate only supports data from the table. If you’re not sure if your data is in the table, click on any cell and you should see additional tab Design in the ribbon: If you’re not seeing it, click Ctrl+t to create new table: Now put the file in your OneDrive folder (you can also use your MS Group library or SharePoint) and you can start creating a flow. Creating a flow We’ll be using instant (manually trigered) flow: We name it and choose Manually trigger a flow: Next action is List rows present in a table from Excel Online (Business) connector. We choose the file and proper table. Then we add Apply to each block and use the value from previous step: Inside the block we use Create item from SharePoint connector. For some of the fields, values might not be chooseable. This usually happens for types other than string (for User/Group type we specify Claims value which is also string) like numbers. We can workaround this using the expression: item()?['PropertyName'] If we save and refresh we’ll see that expression converted to the value similar to what we chosen for string-type fields: Now we can ‘test’ the flow (be careful as it will create items on the list, so it’s more ‘test in production’) Source: Spiceworks In top-right corner we choose ‘Test’ link and specify to perform trigger action manually: We create manuall-triggered flow so the wizard allows us to trigger it straight from the website. After we confirm the connectors being used: We can click ‘Continue’: Aaaaand it runs:</summary></entry><entry><title type="html">Host Skype for Business meetings like a professional</title><link href="https://robdy.github.io/host-sfb-meetings-like-a-pro/" rel="alternate" type="text/html" title="Host Skype for Business meetings like a professional" /><published>2019-01-29T00:00:00+00:00</published><updated>2019-01-29T00:00:00+00:00</updated><id>https://robdy.github.io/host-sfb-meetings-like-a-pro</id><content type="html" xml:base="https://robdy.github.io/host-sfb-meetings-like-a-pro/">&lt;p&gt;In that post I’d like to share some of the best practices for organizing meetings. Please note that &lt;strong&gt;I only focus on technical aspects&lt;/strong&gt; (configuration of Outlook and Skype for Business) and assume that you know the basics (like preparing the agenda, clarifying the purpose of the meeting, choosing appropriate content for the audience) I also assume that your Skype for Business is working correctly (you have enough bandwidth, stable connection).&lt;/p&gt;
 
 &lt;h2 id=&quot;checklist-only&quot;&gt;Checklist only&lt;/h2&gt;
 

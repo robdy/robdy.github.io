@@ -190,7 +190,7 @@
 </nav>
 
   <p>
-  © 2019.
+  © 2020.
   <a href="/LICENSE.md">MIT License.</a>
 </p>
 
@@ -203,6 +203,110 @@
 
   
 
+  
+  <article class="post-body">
+    <h2 class="post-title">
+      <a href="/import-excel-to-shp-list/">
+        How to import Excel file to existing SHP list
+      </a>
+    </h2>
+    <div class="post-meta">
+  <span class="post-date">14 Feb 2020</span>
+  <span class="post-categories">
+    
+  </span>
+</div>
+
+
+    
+      <p>SharePoint doesn’t provide the out-of-the-box option to import data from Excel file to existing list. If you want to put some data from Excel to new list using <code class="highlighter-rouge">Import Spreadsheet</code> app, but it’s not very flexible and sometimes problematic. For example, you have to use browser that supports ActiveX controls (<a href="https://www.techwalla.com/articles/what-browsers-support-activex" target="_blank" rel="noopener noreferrer">=Internet Explorer</a>).</p>
+
+<p>There is, however, an interesting workaround which is based on PowerAutomate (formerly called MS Flow).</p>
+
+<p>Let’s say that we have an existing list which we’d like to use for our leave request system. It contains 3 fields:</p>
+<ul>
+  <li>title (we put user email here, string type)</li>
+  <li>quota (number type)</li>
+  <li>approver (we choose who will approve requests fot that user, field type is user/group)</li>
+</ul>
+
+<h2 id="preparing-the-spreadsheet">Preparing the spreadsheet</h2>
+<p>If you want to import the spreadsheet, you need to remember that Excel connector for PowerAutomate only supports data from the table.
+If you’re not sure if your data is in the table, click on any cell and you should see additional tab <code class="highlighter-rouge">Design</code> in the ribbon:</p>
+
+<p><img src="/images/posts/import-excel-to-shp/new-tab-ribbon.png" alt="new-tab-ribbon.png"></p>
+
+<p>If you’re not seeing it, click Ctrl+t to create new table:</p>
+
+<p><img src="/images/posts/import-excel-to-shp/we-have-a-table.png" alt="we-have-a-table.png"></p>
+
+<p>Now put the file in your OneDrive folder (you can also use your MS Group library or SharePoint) and you can start creating a flow.</p>
+
+<h2 id="creating-a-flow">Creating a flow</h2>
+
+<p>We’ll be using instant (manually trigered) flow:</p>
+
+<p><img src="/images/posts/import-excel-to-shp/create-flow.png" alt="create-flow.png"></p>
+
+<p>We name it and choose <code class="highlighter-rouge">Manually trigger a flow</code>:</p>
+
+<p><img src="/images/posts/import-excel-to-shp/choose-a-trigger.png" alt="choose-a-trigger.png"></p>
+
+<p>Next action is <code class="highlighter-rouge">List rows present in a table</code> from Excel Online (Business) connector.</p>
+
+<p>We choose the file and proper table.</p>
+
+<p>Then we add <code class="highlighter-rouge">Apply to each</code> block and use the value from previous step:</p>
+
+<p><img src="/images/posts/import-excel-to-shp/apply-to-each-input.png" alt="apply-to-each-input.png"></p>
+
+<p>Inside the block we use <code class="highlighter-rouge">Create item</code> from <code class="highlighter-rouge">SharePoint</code> connector.</p>
+
+<p>For some of the fields, values might not be chooseable. This usually happens for types other than string (for <code class="highlighter-rouge">User/Group</code> type we specify <code class="highlighter-rouge">Claims</code> value which is also string) like numbers.</p>
+
+<p>We can workaround this using the expression:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>item()?['PropertyName']
+</code></pre></div></div>
+
+<p><img src="/images/posts/import-excel-to-shp/create-item-inside-loop.png" alt="create-item-inside-loop.png"></p>
+
+<p>If we save and refresh we’ll see that expression converted to the value similar to what we chosen for string-type fields:</p>
+
+<p><img src="/images/posts/import-excel-to-shp/create-item-converted.png" alt="create-item-converted.png"></p>
+
+<p>Now we can ‘test’ the flow (be careful as it will create items on the list, so it’s more ‘test in production’)</p>
+
+<p><img src="/images/posts/import-excel-to-shp/test-in-production.png" alt="test-in-production.png"></p>
+
+<p><sub>Source: <a href="https://community.spiceworks.com/topic/2026463-testing-upgrades-without-a-test-environment" target="_blank" rel="noopener noreferrer">Spiceworks</a></sub></p>
+
+<p>In top-right corner we choose ‘Test’ link and specify to perform trigger action manually:</p>
+
+<p><img src="/images/posts/import-excel-to-shp/test-flow.png" alt="test-flow.png"></p>
+
+<p>We create manuall-triggered flow so the wizard allows us to trigger it straight from the website. After we confirm the connectors being used:</p>
+
+<p><img src="/images/posts/import-excel-to-shp/run-flow-2.png" alt="run-flow-2.png"></p>
+
+<p>We can click ‘Continue’:</p>
+
+<p><img src="/images/posts/import-excel-to-shp/run-flow-3.png" alt="run-flow-3.png"></p>
+
+<p>Aaaaand it runs:</p>
+
+<p><img src="/images/posts/import-excel-to-shp/flow-started.png" alt="flow-started.png"></p>
+
+    
+
+    
+      
+      
+      
+
+      
+    
+  </article>
   
   <article class="post-body">
     <h2 class="post-title">
@@ -367,53 +471,6 @@
       
       
 
-      
-    
-  </article>
-  
-  <article class="post-body">
-    <h2 class="post-title">
-      <a href="/installing-outlook-add-in-for-specific-users/">
-        Installing Outlook add-in for specific users
-      </a>
-    </h2>
-    <div class="post-meta">
-  <span class="post-date">10 Aug 2017</span>
-  <span class="post-categories">
-    
-  </span>
-</div>
-
-
-    
-      <blockquote>
-  <p><strong>NOTE</strong>: I was using Office 365 so the cmdlets below should work in Exchange Online. For on-premises installations, you might need to get the user IDs in a different way.</p>
-
-  <p>If you’re using Office 365, you might want to have a look at <a href="https://docs.microsoft.com/en-us/office/dev/add-ins/publish/centralized-deployment" target="_blank" rel="noopener noreferrer">Centralized Deployment</a>.</p>
-</blockquote>
-
-<p>Goal: to install Outlook add-in available only for specific users and to make it enable by default</p>
-
-<h3 id="1st-attempt">1st attempt:</h3>
-
-<p>If you open Exchange admin center &gt; organization &gt; add-ins and try to add it from there:</p>
-
-<p><img src="/images/posts/2017-08-10-16_24_04-add-ins-microsoft-exchange.png" alt="2017-08-10-16_24_04-add-ins-microsoft-exchange.png"></p>
-
-<p>you’ll not be able to set it provided only to specific user. You can only set its default state for enabled/disabled or make it available to nobody:</p>
-
-<p><img src="/images/posts/2017-08-10-16_29_20-edit-add-in-settings.png" alt="2017-08-10-16_29_20-edit-add-in-settings.png"></p>
-
-
-    
-
-    
-      
-      
-      
-
-      
-        <a href="/installing-outlook-add-in-for-specific-users/">More …</a>
       
     
   </article>

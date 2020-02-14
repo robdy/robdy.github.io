@@ -11,7 +11,7 @@
 
   <title>
     
-      Setup Jekyll blog with Netlify &middot; robdy
+      How to import Excel file to existing SHP list &middot; robdy
     
   </title>
 
@@ -203,11 +203,11 @@
 
     <main class="container">
       <header>
-  <h1 class="post-title">Setup Jekyll blog with Netlify</h1>
+  <h1 class="post-title">How to import Excel file to existing SHP list</h1>
 </header>
 <div class="content">
   <div class="post-meta">
-  <span class="post-date">31 Jan 2018</span>
+  <span class="post-date">14 Feb 2020</span>
   <span class="post-categories">
     
   </span>
@@ -215,94 +215,98 @@
 
 
   <div class="post-body">
-    <p>As I’m not (yet) very experienced with web developing this guide can be obvious. However, it’s worth noted (at least for me) so I can check it if I have to go through the setup process again.</p>
+    <p>SharePoint doesn’t provide the out-of-the-box option to import data from Excel file to existing list. If you want to put some data from Excel to new list using <code class="highlighter-rouge">Import Spreadsheet</code> app, but it’s not very flexible and sometimes problematic. For example, you have to use browser that supports ActiveX controls (<a href="https://www.techwalla.com/articles/what-browsers-support-activex" target="_blank" rel="noopener noreferrer">=Internet Explorer</a>).</p>
+
+<p>There is, however, an interesting workaround which is based on PowerAutomate (formerly called MS Flow).</p>
+
+<p>Let’s say that we have an existing list which we’d like to use for our leave request system. It contains 3 fields:</p>
+<ul>
+  <li>title (we put user email here, string type)</li>
+  <li>quota (number type)</li>
+  <li>approver (we choose who will approve requests fot that user, field type is user/group)</li>
+</ul>
 
 
-      <h2 id="how-to-setup-jekyll-blog">
+      <h2 id="preparing-the-spreadsheet">
         
         
-          How to setup Jekyll blog <a href="#how-to-setup-jekyll-blog" class="header-anchor">#</a>
+          Preparing the spreadsheet <a href="#preparing-the-spreadsheet" class="header-anchor">#</a>
         
         
       </h2>
-<p>I decided to try setting up blog using Jekyll. As a base of it I used <a href="https://github.com/barryclark/jekyll-now" target="_blank" rel="noopener noreferrer">jekyll-now</a> repo.</p>
+<p>If you want to import the spreadsheet, you need to remember that Excel connector for PowerAutomate only supports data from the table.
+If you’re not sure if your data is in the table, click on any cell and you should see additional tab <code class="highlighter-rouge">Design</code> in the ribbon:</p>
+
+<p><img src="/images/posts/import-excel-to-shp/new-tab-ribbon.png" alt="new-tab-ribbon.png"></p>
+
+<p>If you’re not seeing it, click Ctrl+t to create new table:</p>
+
+<p><img src="/images/posts/import-excel-to-shp/we-have-a-table.png" alt="we-have-a-table.png"></p>
+
+<p>Now put the file in your OneDrive folder (you can also use your MS Group library or SharePoint) and you can start creating a flow.</p>
 
 
     
-      <h3 id="github-pages">
+      <h2 id="creating-a-flow">
         
         
-          GitHub Pages <a href="#github-pages" class="header-anchor">#</a>
+          Creating a flow <a href="#creating-a-flow" class="header-anchor">#</a>
         
         
-      </h3>
-<p>For running it on GitHub Pages it was pretty easy, as written in the documentation. Just fork, rename repo to yourusername.github.io, wait up to 10 mins and you’re all set. <del>However, as GitHub Pages don’t support (and as far as I know don’t plan to) HTTPS for custom domains</del> I tried to use <a href="https://netlify.com" target="_blank" rel="noopener noreferrer">Netlify</a> as another platform to host it.</p>
+      </h2>
 
-<p><strong>Update 2018-05-01</strong>: the above statement about GH Pages not supporting custom domains SSL is no longer valid as per <a href="https://blog.github.com/2018-05-01-github-pages-custom-domains-https/" target="_blank" rel="noopener noreferrer">that announcement</a>.</p>
+<p>We’ll be using instant (manually trigered) flow:</p>
 
+<p><img src="/images/posts/import-excel-to-shp/create-flow.png" alt="create-flow.png"></p>
 
-    
-      <h3 id="netlify">
-        
-        
-          Netlify <a href="#netlify" class="header-anchor">#</a>
-        
-        
-      </h3>
-<p>One of the services that supports HTTPS for custom domains is <a href="https://netlify.com" target="_blank" rel="noopener noreferrer">Netlify</a>. I quickly found <a href="https://www.netlify.com/blog/2015/10/28/a-step-by-step-guide-jekyll-3.0-on-netlify/" target="_blank" rel="noopener noreferrer">this instruction</a>.</p>
+<p>We name it and choose <code class="highlighter-rouge">Manually trigger a flow</code>:</p>
 
-<p>However, it turned out it’s not so easy as described in the article.</p>
+<p><img src="/images/posts/import-excel-to-shp/choose-a-trigger.png" alt="choose-a-trigger.png"></p>
 
-<!--more-->
+<p>Next action is <code class="highlighter-rouge">List rows present in a table</code> from Excel Online (Business) connector.</p>
 
-<p>First error I received was</p>
+<p>We choose the file and proper table.</p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/local/bin/build: line 26: jekyll: <span class="nb">command </span>not found
+<p>Then we add <code class="highlighter-rouge">Apply to each</code> block and use the value from previous step:</p>
+
+<p><img src="/images/posts/import-excel-to-shp/apply-to-each-input.png" alt="apply-to-each-input.png"></p>
+
+<p>Inside the block we use <code class="highlighter-rouge">Create item</code> from <code class="highlighter-rouge">SharePoint</code> connector.</p>
+
+<p>For some of the fields, values might not be chooseable. This usually happens for types other than string (for <code class="highlighter-rouge">User/Group</code> type we specify <code class="highlighter-rouge">Claims</code> value which is also string) like numbers.</p>
+
+<p>We can workaround this using the expression:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>item()?['PropertyName']
 </code></pre></div></div>
 
-<p>What I had to do was to create a Gemfile with the following:</p>
+<p><img src="/images/posts/import-excel-to-shp/create-item-inside-loop.png" alt="create-item-inside-loop.png"></p>
 
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">source</span> <span class="s2">"https://rubygems.org"</span>
- <span class="n">gem</span> <span class="s1">'jekyll'</span><span class="p">,</span> <span class="s1">'3.7.2'</span>
-</code></pre></div></div>
+<p>If we save and refresh we’ll see that expression converted to the value similar to what we chosen for string-type fields:</p>
 
-<p>After creating Gemfile next error was:</p>
+<p><img src="/images/posts/import-excel-to-shp/create-item-converted.png" alt="create-item-converted.png"></p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Deprecation: The <span class="s1">'gems'</span> configuration option has been renamed to <span class="s1">'plugins'</span><span class="nb">.</span> Please update your config file accordingly.
-</code></pre></div></div>
+<p>Now we can ‘test’ the flow (be careful as it will create items on the list, so it’s more ‘test in production’)</p>
 
-<p>Luckily the description here is self-explanatory. Next one was:</p>
+<p><img src="/images/posts/import-excel-to-shp/test-in-production.png" alt="test-in-production.png"></p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll 3.7.2 | Error: The jekyll-theme-minimal theme could not be found.
-</code></pre></div></div>
+<p><sub>Source: <a href="https://community.spiceworks.com/topic/2026463-testing-upgrades-without-a-test-environment" target="_blank" rel="noopener noreferrer">Spiceworks</a></sub></p>
 
-<p>I received this because I chose the theme while setting up page on GitHub. I had to remove the line <code class="highlighter-rouge">theme: jekyll-theme-minimal</code> from <code class="highlighter-rouge">_config.yml</code> file.</p>
+<p>In top-right corner we choose ‘Test’ link and specify to perform trigger action manually:</p>
 
-<p>Next one was not so easy:</p>
+<p><img src="/images/posts/import-excel-to-shp/test-flow.png" alt="test-flow.png"></p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll 3.7.2 | Error:  <span class="o">(</span>/opt/build/repo/_config.yml<span class="o">)</span>: did not find expected key <span class="k">while </span>parsing a block mapping at line 6 column 1
-</code></pre></div></div>
+<p>We create manuall-triggered flow so the wizard allows us to trigger it straight from the website. After we confirm the connectors being used:</p>
 
-<p>Fortunately, the line containing the error was pointed out. It contained <code class="highlighter-rouge">name: Rob Dy</code> what, for some reason, doesn’t work on Netlify but works on GitHub. I tried to change it to <code class="highlighter-rouge">name: "Rob Dy"</code> and that helped.</p>
+<p><img src="/images/posts/import-excel-to-shp/run-flow-2.png" alt="run-flow-2.png"></p>
 
-<p>Another error I got was:</p>
+<p>We can click ‘Continue’:</p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Dependency Error: Yikes! It looks like you don<span class="s1">'t have jekyll-sitemap or one of its dependencies installed. (...)
-</span></code></pre></div></div>
+<p><img src="/images/posts/import-excel-to-shp/run-flow-3.png" alt="run-flow-3.png"></p>
 
-<p>I had no idea how this can be resolved but found somewhere that Gemfile is the one to be changed in such cases. I added the lines to add all the gems/plugins I had in <code class="highlighter-rouge">_config.yml</code>:</p>
+<p>Aaaaand it runs:</p>
 
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'jekyll-sitemap'</span>
-<span class="n">gem</span> <span class="s1">'jekyll-feed'</span>
-</code></pre></div></div>
-
-<p>That’s it! After that I received <code class="highlighter-rouge">Site is live</code> and I was able to see the welcome page</p>
-
-<p><img src="/images/posts/2018-01-31%2022_32_33-Rob%20Dy%20%E2%80%93%20In-free-time%20developer.png" alt="2018-01-31 22_32_33-Rob Dy – In-free-time developer.png"></p>
-
-<p>Just one more thing - to also see drafts on the webpage I had to adjust the settings a bit:</p>
-
-<p><img src="/images/posts/2018-01-31%2022_34_53-Build%20&amp;%20deploy%20_%20Settings.png" alt="2018-01-31 22_34_53-Build &amp; deploy _ Settings.png"></p>
+<p><img src="/images/posts/import-excel-to-shp/flow-started.png" alt="flow-started.png"></p>
     
 
 
@@ -330,9 +334,9 @@
   *  https://disqus.com/admin/universalcode/#configuration-variables
   */
   var disqus_config = function () {
-    this.page.url = "https://robdy.github.io/setup-jekyll-blog-with-netlify/";
+    this.page.url = "https://robdy.github.io/import-excel-to-shp-list/";
     this.page.identifier = "" ||
-                           "https://robdy.github.io/setup-jekyll-blog-with-netlify/";
+                           "https://robdy.github.io/import-excel-to-shp-list/";
   }
   function loadDisqusComments() { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');
@@ -356,15 +360,6 @@
     
       <li>
         <h3>
-          <a href="/import-excel-to-shp-list/">
-            How to import Excel file to existing SHP list
-            <small>14 Feb 2020</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
           <a href="/host-sfb-meetings-like-a-pro/">
             Host Skype for Business meetings like a professional
             <small>29 Jan 2019</small>
@@ -377,6 +372,15 @@
           <a href="/getting-started-with-discord-bot/">
             Getting started with Discord bot
             <small>07 Dec 2018</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/setup-jekyll-blog-with-netlify/">
+            Setup Jekyll blog with Netlify
+            <small>31 Jan 2018</small>
           </a>
         </h3>
       </li>
