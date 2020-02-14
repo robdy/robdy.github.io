@@ -230,72 +230,6 @@
   <li>approver (we choose who will approve requests fot that user, field type is user/group)</li>
 </ul>
 
-<h2 id="preparing-the-spreadsheet">Preparing the spreadsheet</h2>
-<p>If you want to import the spreadsheet, you need to remember that Excel connector for PowerAutomate only supports data from the table.
-If you’re not sure if your data is in the table, click on any cell and you should see additional tab <code class="highlighter-rouge">Design</code> in the ribbon:</p>
-
-<p><img src="/images/posts/import-excel-to-shp/new-tab-ribbon.png" alt="new-tab-ribbon.png"></p>
-
-<p>If you’re not seeing it, click Ctrl+t to create new table:</p>
-
-<p><img src="/images/posts/import-excel-to-shp/we-have-a-table.png" alt="we-have-a-table.png"></p>
-
-<p>Now put the file in your OneDrive folder (you can also use your MS Group library or SharePoint) and you can start creating a flow.</p>
-
-<h2 id="creating-a-flow">Creating a flow</h2>
-
-<p>We’ll be using instant (manually trigered) flow:</p>
-
-<p><img src="/images/posts/import-excel-to-shp/create-flow.png" alt="create-flow.png"></p>
-
-<p>We name it and choose <code class="highlighter-rouge">Manually trigger a flow</code>:</p>
-
-<p><img src="/images/posts/import-excel-to-shp/choose-a-trigger.png" alt="choose-a-trigger.png"></p>
-
-<p>Next action is <code class="highlighter-rouge">List rows present in a table</code> from Excel Online (Business) connector.</p>
-
-<p>We choose the file and proper table.</p>
-
-<p>Then we add <code class="highlighter-rouge">Apply to each</code> block and use the value from previous step:</p>
-
-<p><img src="/images/posts/import-excel-to-shp/apply-to-each-input.png" alt="apply-to-each-input.png"></p>
-
-<p>Inside the block we use <code class="highlighter-rouge">Create item</code> from <code class="highlighter-rouge">SharePoint</code> connector.</p>
-
-<p>For some of the fields, values might not be chooseable. This usually happens for types other than string (for <code class="highlighter-rouge">User/Group</code> type we specify <code class="highlighter-rouge">Claims</code> value which is also string) like numbers.</p>
-
-<p>We can workaround this using the expression:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>item()?['PropertyName']
-</code></pre></div></div>
-
-<p><img src="/images/posts/import-excel-to-shp/create-item-inside-loop.png" alt="create-item-inside-loop.png"></p>
-
-<p>If we save and refresh we’ll see that expression converted to the value similar to what we chosen for string-type fields:</p>
-
-<p><img src="/images/posts/import-excel-to-shp/create-item-converted.png" alt="create-item-converted.png"></p>
-
-<p>Now we can ‘test’ the flow (be careful as it will create items on the list, so it’s more ‘test in production’)</p>
-
-<p><img src="/images/posts/import-excel-to-shp/test-in-production.png" alt="test-in-production.png"></p>
-
-<p><sub>Source: <a href="https://community.spiceworks.com/topic/2026463-testing-upgrades-without-a-test-environment" target="_blank" rel="noopener noreferrer">Spiceworks</a></sub></p>
-
-<p>In top-right corner we choose ‘Test’ link and specify to perform trigger action manually:</p>
-
-<p><img src="/images/posts/import-excel-to-shp/test-flow.png" alt="test-flow.png"></p>
-
-<p>We create manuall-triggered flow so the wizard allows us to trigger it straight from the website. After we confirm the connectors being used:</p>
-
-<p><img src="/images/posts/import-excel-to-shp/run-flow-2.png" alt="run-flow-2.png"></p>
-
-<p>We can click ‘Continue’:</p>
-
-<p><img src="/images/posts/import-excel-to-shp/run-flow-3.png" alt="run-flow-3.png"></p>
-
-<p>Aaaaand it runs:</p>
-
-<p><img src="/images/posts/import-excel-to-shp/flow-started.png" alt="flow-started.png"></p>
 
     
 
@@ -304,6 +238,8 @@ If you’re not sure if your data is in the table, click on any cell and you sho
       
       
 
+      
+        <a href="/import-excel-to-shp-list/">More …</a>
       
     
   </article>

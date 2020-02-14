@@ -4,7 +4,7 @@
  <title>robdy</title>
  <link href="https://robdy.github.io/atom.xml" rel="self"/>
  <link href="https://robdy.github.io/"/>
- <updated>2020-02-14T08:17:33+00:00</updated>
+ <updated>2020-02-14T08:21:43+00:00</updated>
  <id>https://robdy.github.io</id>
  <author>
    <name></name>
@@ -27,6 +27,8 @@
   &lt;li&gt;quota (number type)&lt;/li&gt;
   &lt;li&gt;approver (we choose who will approve requests fot that user, field type is user/group)&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;!--more--&gt;
 
 &lt;h2 id=&quot;preparing-the-spreadsheet&quot;&gt;Preparing the spreadsheet&lt;/h2&gt;
 &lt;p&gt;If you want to import the spreadsheet, you need to remember that Excel connector for PowerAutomate only supports data from the table.
