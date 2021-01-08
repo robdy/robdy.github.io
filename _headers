@@ -118,15 +118,6 @@
   Link: </component---src-templates-blog-post-js-57f63d19052a469a54bb.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/finding-all-domains-used-to-sync-onedrive/page-data.json>; rel=preload; as=fetch; crossorigin
-/skype-connector-decomission/
-  Link: </webpack-runtime-93076a1307758c04c7a9.js>; rel=preload; as=script
-  Link: </framework-81279cacaab4bdba7685.js>; rel=preload; as=script
-  Link: </app-3a958150371a9c4f5b7f.js>; rel=preload; as=script
-  Link: </styles-e9d24b1846c7d6eb9685.js>; rel=preload; as=script
-  Link: </commons-fed99a1fecc46ebe451c.js>; rel=preload; as=script
-  Link: </component---src-templates-blog-post-js-57f63d19052a469a54bb.js>; rel=preload; as=script
-  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </page-data/skype-connector-decomission/page-data.json>; rel=preload; as=fetch; crossorigin
 /temporarily-disabling-flow/
   Link: </webpack-runtime-93076a1307758c04c7a9.js>; rel=preload; as=script
   Link: </framework-81279cacaab4bdba7685.js>; rel=preload; as=script
@@ -145,6 +136,15 @@
   Link: </component---src-templates-blog-post-js-57f63d19052a469a54bb.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/csteamsupdatemanagementpolicy-cmdlets/page-data.json>; rel=preload; as=fetch; crossorigin
+/skype-connector-decomission/
+  Link: </webpack-runtime-93076a1307758c04c7a9.js>; rel=preload; as=script
+  Link: </framework-81279cacaab4bdba7685.js>; rel=preload; as=script
+  Link: </app-3a958150371a9c4f5b7f.js>; rel=preload; as=script
+  Link: </styles-e9d24b1846c7d6eb9685.js>; rel=preload; as=script
+  Link: </commons-fed99a1fecc46ebe451c.js>; rel=preload; as=script
+  Link: </component---src-templates-blog-post-js-57f63d19052a469a54bb.js>; rel=preload; as=script
+  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </page-data/skype-connector-decomission/page-data.json>; rel=preload; as=fetch; crossorigin
 /custom-connectors-with-dlp-policy/
   Link: </webpack-runtime-93076a1307758c04c7a9.js>; rel=preload; as=script
   Link: </framework-81279cacaab4bdba7685.js>; rel=preload; as=script
@@ -334,16 +334,6 @@
   Link: </component---src-templates-tags-js-b56f789a954e5659f8a7.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/tags/audit-log/page-data.json>; rel=preload; as=fetch; crossorigin
-/tags/teams/
-  Link: </webpack-runtime-93076a1307758c04c7a9.js>; rel=preload; as=script
-  Link: </framework-81279cacaab4bdba7685.js>; rel=preload; as=script
-  Link: </app-3a958150371a9c4f5b7f.js>; rel=preload; as=script
-  Link: </styles-e9d24b1846c7d6eb9685.js>; rel=preload; as=script
-  Link: </commons-fed99a1fecc46ebe451c.js>; rel=preload; as=script
-  Link: </a125c204f161914240bc4545992f10f177648ef9-38cca83b05373e3b86a5.js>; rel=preload; as=script
-  Link: </component---src-templates-tags-js-b56f789a954e5659f8a7.js>; rel=preload; as=script
-  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </page-data/tags/teams/page-data.json>; rel=preload; as=fetch; crossorigin
 /tags/flow/
   Link: </webpack-runtime-93076a1307758c04c7a9.js>; rel=preload; as=script
   Link: </framework-81279cacaab4bdba7685.js>; rel=preload; as=script
@@ -354,6 +344,16 @@
   Link: </component---src-templates-tags-js-b56f789a954e5659f8a7.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/tags/flow/page-data.json>; rel=preload; as=fetch; crossorigin
+/tags/teams/
+  Link: </webpack-runtime-93076a1307758c04c7a9.js>; rel=preload; as=script
+  Link: </framework-81279cacaab4bdba7685.js>; rel=preload; as=script
+  Link: </app-3a958150371a9c4f5b7f.js>; rel=preload; as=script
+  Link: </styles-e9d24b1846c7d6eb9685.js>; rel=preload; as=script
+  Link: </commons-fed99a1fecc46ebe451c.js>; rel=preload; as=script
+  Link: </a125c204f161914240bc4545992f10f177648ef9-38cca83b05373e3b86a5.js>; rel=preload; as=script
+  Link: </component---src-templates-tags-js-b56f789a954e5659f8a7.js>; rel=preload; as=script
+  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </page-data/tags/teams/page-data.json>; rel=preload; as=fetch; crossorigin
 /tags/power-platform/
   Link: </webpack-runtime-93076a1307758c04c7a9.js>; rel=preload; as=script
   Link: </framework-81279cacaab4bdba7685.js>; rel=preload; as=script
