@@ -73,15 +73,6 @@
   Link: </component---src-templates-blog-post-js-57f63d19052a469a54bb.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/installing-outlook-add-in-for-specific-users/page-data.json>; rel=preload; as=fetch; crossorigin
-/setup-jekyll-blog-with-netlify/
-  Link: </webpack-runtime-93076a1307758c04c7a9.js>; rel=preload; as=script
-  Link: </framework-7a55684b767650a0562d.js>; rel=preload; as=script
-  Link: </app-e7ad1fb38665b5710884.js>; rel=preload; as=script
-  Link: </styles-e9d24b1846c7d6eb9685.js>; rel=preload; as=script
-  Link: </commons-fed99a1fecc46ebe451c.js>; rel=preload; as=script
-  Link: </component---src-templates-blog-post-js-57f63d19052a469a54bb.js>; rel=preload; as=script
-  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </page-data/setup-jekyll-blog-with-netlify/page-data.json>; rel=preload; as=fetch; crossorigin
 /getting-started-with-discord-bot/
   Link: </webpack-runtime-93076a1307758c04c7a9.js>; rel=preload; as=script
   Link: </framework-7a55684b767650a0562d.js>; rel=preload; as=script
@@ -91,6 +82,15 @@
   Link: </component---src-templates-blog-post-js-57f63d19052a469a54bb.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/getting-started-with-discord-bot/page-data.json>; rel=preload; as=fetch; crossorigin
+/setup-jekyll-blog-with-netlify/
+  Link: </webpack-runtime-93076a1307758c04c7a9.js>; rel=preload; as=script
+  Link: </framework-7a55684b767650a0562d.js>; rel=preload; as=script
+  Link: </app-e7ad1fb38665b5710884.js>; rel=preload; as=script
+  Link: </styles-e9d24b1846c7d6eb9685.js>; rel=preload; as=script
+  Link: </commons-fed99a1fecc46ebe451c.js>; rel=preload; as=script
+  Link: </component---src-templates-blog-post-js-57f63d19052a469a54bb.js>; rel=preload; as=script
+  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </page-data/setup-jekyll-blog-with-netlify/page-data.json>; rel=preload; as=fetch; crossorigin
 /host-sfb-meetings-like-a-pro/
   Link: </webpack-runtime-93076a1307758c04c7a9.js>; rel=preload; as=script
   Link: </framework-7a55684b767650a0562d.js>; rel=preload; as=script
@@ -136,15 +136,6 @@
   Link: </component---src-templates-blog-post-js-57f63d19052a469a54bb.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/csteamsupdatemanagementpolicy-cmdlets/page-data.json>; rel=preload; as=fetch; crossorigin
-/skype-connector-decomission/
-  Link: </webpack-runtime-93076a1307758c04c7a9.js>; rel=preload; as=script
-  Link: </framework-7a55684b767650a0562d.js>; rel=preload; as=script
-  Link: </app-e7ad1fb38665b5710884.js>; rel=preload; as=script
-  Link: </styles-e9d24b1846c7d6eb9685.js>; rel=preload; as=script
-  Link: </commons-fed99a1fecc46ebe451c.js>; rel=preload; as=script
-  Link: </component---src-templates-blog-post-js-57f63d19052a469a54bb.js>; rel=preload; as=script
-  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </page-data/skype-connector-decomission/page-data.json>; rel=preload; as=fetch; crossorigin
 /custom-connectors-with-dlp-policy/
   Link: </webpack-runtime-93076a1307758c04c7a9.js>; rel=preload; as=script
   Link: </framework-7a55684b767650a0562d.js>; rel=preload; as=script
@@ -154,6 +145,15 @@
   Link: </component---src-templates-blog-post-js-57f63d19052a469a54bb.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/custom-connectors-with-dlp-policy/page-data.json>; rel=preload; as=fetch; crossorigin
+/skype-connector-decomission/
+  Link: </webpack-runtime-93076a1307758c04c7a9.js>; rel=preload; as=script
+  Link: </framework-7a55684b767650a0562d.js>; rel=preload; as=script
+  Link: </app-e7ad1fb38665b5710884.js>; rel=preload; as=script
+  Link: </styles-e9d24b1846c7d6eb9685.js>; rel=preload; as=script
+  Link: </commons-fed99a1fecc46ebe451c.js>; rel=preload; as=script
+  Link: </component---src-templates-blog-post-js-57f63d19052a469a54bb.js>; rel=preload; as=script
+  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </page-data/skype-connector-decomission/page-data.json>; rel=preload; as=fetch; crossorigin
 /finding-flows-suspended-by-dlp/
   Link: </webpack-runtime-93076a1307758c04c7a9.js>; rel=preload; as=script
   Link: </framework-7a55684b767650a0562d.js>; rel=preload; as=script
@@ -203,26 +203,6 @@
   Link: </component---src-templates-tags-js-b56f789a954e5659f8a7.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/tags/exchange/page-data.json>; rel=preload; as=fetch; crossorigin
-/tags/jekyll/
-  Link: </webpack-runtime-93076a1307758c04c7a9.js>; rel=preload; as=script
-  Link: </framework-7a55684b767650a0562d.js>; rel=preload; as=script
-  Link: </app-e7ad1fb38665b5710884.js>; rel=preload; as=script
-  Link: </styles-e9d24b1846c7d6eb9685.js>; rel=preload; as=script
-  Link: </commons-fed99a1fecc46ebe451c.js>; rel=preload; as=script
-  Link: </a125c204f161914240bc4545992f10f177648ef9-38cca83b05373e3b86a5.js>; rel=preload; as=script
-  Link: </component---src-templates-tags-js-b56f789a954e5659f8a7.js>; rel=preload; as=script
-  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </page-data/tags/jekyll/page-data.json>; rel=preload; as=fetch; crossorigin
-/tags/netlify/
-  Link: </webpack-runtime-93076a1307758c04c7a9.js>; rel=preload; as=script
-  Link: </framework-7a55684b767650a0562d.js>; rel=preload; as=script
-  Link: </app-e7ad1fb38665b5710884.js>; rel=preload; as=script
-  Link: </styles-e9d24b1846c7d6eb9685.js>; rel=preload; as=script
-  Link: </commons-fed99a1fecc46ebe451c.js>; rel=preload; as=script
-  Link: </a125c204f161914240bc4545992f10f177648ef9-38cca83b05373e3b86a5.js>; rel=preload; as=script
-  Link: </component---src-templates-tags-js-b56f789a954e5659f8a7.js>; rel=preload; as=script
-  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </page-data/tags/netlify/page-data.json>; rel=preload; as=fetch; crossorigin
 /tags/discord/
   Link: </webpack-runtime-93076a1307758c04c7a9.js>; rel=preload; as=script
   Link: </framework-7a55684b767650a0562d.js>; rel=preload; as=script
@@ -253,6 +233,26 @@
   Link: </component---src-templates-tags-js-b56f789a954e5659f8a7.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/tags/ifttt/page-data.json>; rel=preload; as=fetch; crossorigin
+/tags/jekyll/
+  Link: </webpack-runtime-93076a1307758c04c7a9.js>; rel=preload; as=script
+  Link: </framework-7a55684b767650a0562d.js>; rel=preload; as=script
+  Link: </app-e7ad1fb38665b5710884.js>; rel=preload; as=script
+  Link: </styles-e9d24b1846c7d6eb9685.js>; rel=preload; as=script
+  Link: </commons-fed99a1fecc46ebe451c.js>; rel=preload; as=script
+  Link: </a125c204f161914240bc4545992f10f177648ef9-38cca83b05373e3b86a5.js>; rel=preload; as=script
+  Link: </component---src-templates-tags-js-b56f789a954e5659f8a7.js>; rel=preload; as=script
+  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </page-data/tags/jekyll/page-data.json>; rel=preload; as=fetch; crossorigin
+/tags/netlify/
+  Link: </webpack-runtime-93076a1307758c04c7a9.js>; rel=preload; as=script
+  Link: </framework-7a55684b767650a0562d.js>; rel=preload; as=script
+  Link: </app-e7ad1fb38665b5710884.js>; rel=preload; as=script
+  Link: </styles-e9d24b1846c7d6eb9685.js>; rel=preload; as=script
+  Link: </commons-fed99a1fecc46ebe451c.js>; rel=preload; as=script
+  Link: </a125c204f161914240bc4545992f10f177648ef9-38cca83b05373e3b86a5.js>; rel=preload; as=script
+  Link: </component---src-templates-tags-js-b56f789a954e5659f8a7.js>; rel=preload; as=script
+  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </page-data/tags/netlify/page-data.json>; rel=preload; as=fetch; crossorigin
 /tags/skype-for-business/
   Link: </webpack-runtime-93076a1307758c04c7a9.js>; rel=preload; as=script
   Link: </framework-7a55684b767650a0562d.js>; rel=preload; as=script
