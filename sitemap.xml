@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url> <loc>https://robdy.github.io/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://robdy.github.io/powershell-tip-skip-get/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://robdy.github.io/installing-outlook-add-in-for-specific-users/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://robdy.github.io/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://robdy.github.io/searching-in-whole-forest/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://robdy.github.io/setup-jekyll-blog-with-netlify/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://robdy.github.io/host-sfb-meetings-like-a-pro/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://robdy.github.io/getting-started-with-discord-bot/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://robdy.github.io/import-excel-to-shp-list/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://robdy.github.io/finding-all-domains-used-to-sync-onedrive/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://robdy.github.io/temporarily-disabling-flow/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://robdy.github.io/csteamsupdatemanagementpolicy-cmdlets/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://robdy.github.io/skype-connector-decomission/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://robdy.github.io/custom-connectors-with-dlp-policy/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://robdy.github.io/skype-connector-decomission/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://robdy.github.io/finding-flows-suspended-by-dlp/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://robdy.github.io/finding-all-domains-used-to-sync-onedrive/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://robdy.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://robdy.github.io/all/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://robdy.github.io/tags/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
